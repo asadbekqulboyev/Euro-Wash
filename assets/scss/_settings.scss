@@ -1,0 +1,138 @@
+*, ul, ol, p{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: 'PP Neue Montreal';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/ppneuemontreal-book.woff);
+}
+@font-face {
+    font-family: 'PP Neue Montreal';
+    font-style: normal;
+    font-weight: 300;
+    src: url(../fonts/ppneuemontreal-thin.otf);
+}
+@font-face {
+    font-family: 'PP Neue Montreal';
+    font-style: normal;
+    font-weight: 500;
+    src: url(../fonts/ppneuemontreal-medium.otf);
+}
+@font-face {
+    font-family: 'PP Neue Montreal';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/ppneuemontreal-bold.woff);
+}
+:root{
+    --main-color: #001B2B;
+    --secondary-color: #202F38;
+    --font: "PP Neue Montreal";
+    --thin: 300;
+    --bold:700;
+    --medium: 500;
+    --semi-bold: 600;
+    --gray-color: #78838A;
+    --h2: 20px;
+    --h1: 30px;
+    --h4: 20px;
+    --small-text: 12px;
+    --red: #F26C6C;
+    --white: #fff;
+    --light-gray: #f6f6f6;
+    --light-blue: #3CB2F2;
+
+}
+
+body {
+    font-family: 'PP Neue Montreal';
+    font-size: 16px;
+    font-weight: 500;
+    line-height: normal;
+    color: var(--main-color);
+    background-color: #f6f6f6;
+
+    @media (max-width:768px){
+        font-size: 14px;
+    }
+   
+}
+.container {
+    max-width: 1320px;
+    width: 100%;
+    margin: 0 auto;
+    @media (max-width:1440px){
+        padding: 0 15px;
+    }
+}
+.button{
+    padding: 12px 24px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .3s all ease;
+    border: none;
+    display: inline-block;
+
+    &.blue{
+        background-color: #3CB2F2;
+        color: #fff;
+
+        &:hover{
+            background-color: #1596DA;
+        }
+        &:active{
+            background-color: #3CB2F2;
+            opacity: 0.5;
+        }
+    }
+
+    &.black{
+        background-color: #001B2B;
+        color: #fff;
+        display: inline-block;
+
+        &:hover{
+            opacity: 0.5;
+        }
+    }
+    &.white{
+        background-color: #fff;
+        color: #202F38;
+        display: inline-block;
+
+        &:active{
+            opacity: 0.5;
+        }
+    }
+}
+.slide_btn{
+    width: 44px;
+    height: 44px;
+    border-radius: 10px;
+    background: #F6F6F6;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    cursor: pointer;
+    flex: 0 0 auto;
+    transition: all .2s linear;
+    svg path {
+        transition: all .2s linear;
+    }
+    &:hover{
+        background: #3CB2F2;
+        svg path {
+            stroke: #fff;
+        }
+    }
+    &.next{
+        transform: rotate(180deg);
+    }
+}
