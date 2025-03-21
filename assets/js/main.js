@@ -2,8 +2,8 @@ $(document).ready(function () {
 
 // Dropdowns
 $(".header__hamburger").click(function () {
-    $(".header__hamburger-menu").toggleClass("active");
-    if($(".header__hamburger-menu").hasClass("active")) {
+    $(".header__mobile_menu").toggleClass("active");
+    if($(".header__mobile_menu").hasClass("active")) {
         $(this).children("img").attr("src", "assets/images/menu_close.svg");
     } else {
         $(this).children("img").attr("src", "assets/images/hamburger-dots.svg");
