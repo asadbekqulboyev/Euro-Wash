@@ -8,7 +8,7 @@
             padding-right: 0;
     }
     }
-    .row{
+    &__container {
         display: flex;
         justify-content: space-between;
         align-items: stretch;
@@ -114,6 +114,27 @@
         }
 
     }
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 24px;
+        
+        @media (max-width:768px){
+           padding-right: 15px;
+           margin-bottom: 10px;
+           gap: 24px;
+           h2{
+            width: 70%;
+           }
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+            font-weight: var(--medium);
+            
+        }
+    }
     &-next{
         position: absolute;
         top: 268px;
@@ -152,7 +173,7 @@
         }
     }
 }
-.bestSeller {
+.bestseller {
     margin: 80px 0;
 
     @media (max-width:768px){
@@ -166,9 +187,26 @@
         }
     }
 
-}
-.bestSeller__swiper {
-    position: relative;
+    &__swiper {
+        position: relative;
+    }
+    &__title{
+        display: flex;
+        justify-content: space-between;
+        align-items: end;
+        margin-bottom: 24px;
+        @media (max-width:768px){
+           padding-right: 15px;
+           margin-bottom: 10px;
+           gap: 24px;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+            font-weight: var(--medium);
+            
+        }
+    }
 }
 .swiper.onsaleSwiper,
 .swiper.bestSellerSwiper {
@@ -435,25 +473,7 @@
         width: 100%;
     }
 }
-.title{
-    display: flex;
-    justify-content: space-between;
-    align-items: end;
-    margin-bottom: 24px;
 
-    @media (max-width:768px){
-       padding-right: 15px;
-       margin-bottom: 10px;
-       gap: 24px;
-    }
-
-    a{
-        text-decoration: none;
-        color: inherit;
-        font-weight: var(--medium);
-        
-    }
-}
 h2 {
     font-size: 30px;
 
@@ -461,7 +481,7 @@ h2 {
        font-size: 24px;
     }
     @media (max-width:576px){
-       width: 60%;
+       width: 70%;
     }
 }
 .bestSeller-prev, .bestSeller-next {
@@ -531,9 +551,11 @@ h2 {
         background-position: right;  
 
         @media (max-width:768px){
-            background-position: bottom;
-            background-size: 175px;
+            background-position: -15px 46px;
+            background-size: 155px;
+            width: calc(50% - 12px);
         }
+
         
         
         h4 {
