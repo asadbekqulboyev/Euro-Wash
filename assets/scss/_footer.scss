@@ -4,7 +4,7 @@
     padding: 40px 0;
 
     @media (max-width:576px){
-       padding-bottom: 20px;
+    //    padding-bottom: 40px;
     }
 
     @media (max-width:768px){
@@ -150,7 +150,7 @@
                flex-direction: column;
                justify-content: start;
                align-items: start;
-               gap: 15px 0;
+               gap: 40px 0;
             }
         }
         &--links{
@@ -159,7 +159,7 @@
 
             @media (max-width:576px){
                flex-direction: column;
-               gap: 15px 0;
+               gap: 20px 0;
             }
 
             a{
