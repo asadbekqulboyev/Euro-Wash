@@ -1,31 +1,8 @@
+@import '../fonts/stylesheet.css';
 *, ul, ol, p{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-@font-face {
-    font-family: 'PP Neue Montreal';
-    font-style: normal;
-    font-weight: 400;
-    src: url(../fonts/ppneuemontreal-book.woff);
-}
-@font-face {
-    font-family: 'PP Neue Montreal';
-    font-style: normal;
-    font-weight: 300;
-    src: url(../fonts/ppneuemontreal-thin.otf);
-}
-@font-face {
-    font-family: 'PP Neue Montreal';
-    font-style: normal;
-    font-weight: 500;
-    src: url(../fonts/ppneuemontreal-medium.otf);
-}
-@font-face {
-    font-family: 'PP Neue Montreal';
-    font-style: normal;
-    font-weight: 700;
-    src: url(../fonts/ppneuemontreal-bold.woff);
 }
 :root{
     --main-color: #001B2B;
@@ -46,7 +23,6 @@
     --light-blue: #3CB2F2;
 
 }
-
 body {
     font-family: 'PP Neue Montreal';
     font-size: 16px;
@@ -54,11 +30,9 @@ body {
     line-height: normal;
     color: var(--main-color);
     background-color: #f6f6f6;
-
     @media (max-width:768px){
-        font-size: 14px;
+    font-size: 14px;
     }
-   
 }
 .container {
     max-width: 1320px;

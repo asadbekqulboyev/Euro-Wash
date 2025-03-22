@@ -27,6 +27,95 @@ $('.header__catalog').click(function (e) {
     }
     e.stopPropagation();
 });
+if(innerWidth < 456){   
+// $('.header__bottom_form-button').attr('type', 'disabled');
+// $('.header__bottom_form-button').click(function (e) {
+//     $('.header__bottom_form-button').attr('type', 'submit');
+//     $('.header__bottom_form').addClass('is-active');
+//     if (!$('.header__bottom_form').hasClass('is-active')) {
+//         $('.header__bottom_form-button').css({
+//             'left': '0',
+//             'padding-right': '0'
+//         })
+//     } else {
+//         $('.header__bottom .container').css({
+//             'justify-content': 'flex-end',
+//         })
+//         $('.header__bottom_form-button').css({
+//             'left': 'auto',
+//             'margin-right': '48px'
+//         })
+//         $('.header__bottom_form__close').css({
+//             'display': 'block'
+//         })
+//     }
+// })
+// $('.header__bottom_form__close').click(function () { 
+//     $('.header__bottom_form').removeClass('is-active') 
+//     $(this).css({
+//         'display': 'none'
+//     })
+//     $('.header__bottom_form-button').css({
+//         'left': '0',
+//         'margin-right': '0'
+//     })
+//     $('.header__bottom .container').css({
+//         'justify-content': 'space-between',
+//     })
+// }) 
+let clickedOnce = false; // Tugma bosilganligini tekshirish uchun o'zgaruvchi
+
+// Tugmani dastlab bloklab qo'yamiz
+$('.header__bottom_form-button').prop('disabled', false);
+
+$('.header__bottom_form-button').click(function (e) {
+    e.preventDefault(); // Formani avtomatik yuborilishidan saqlaymiz
+
+    if (!clickedOnce) {
+        $('.header__bottom_form').addClass('is-active'); // Formani ochamiz
+
+        $('.header__bottom .container').css({
+            'justify-content': 'flex-end',
+        });
+
+        $('.header__bottom_form-button').css({
+            'left': 'auto',
+            'margin-right': '48px'
+        });
+
+        $('.header__bottom_form__close').css({
+            'display': 'block'
+        });
+
+        clickedOnce = true; // Ikkinchi bosishda formani yuborish uchun holatni o'zgartiramiz
+    } else {
+        $('.header__bottom_form').submit(); // Formani yuboramiz
+    }
+});
+
+// Formani yopish tugmasi bosilganda
+$('.header__bottom_form__close').click(function () { 
+    $('.header__bottom_form').removeClass('is-active'); // Formani yopamiz
+
+    $(this).css({
+        'display': 'none'
+    });
+
+    $('.header__bottom_form-button').css({
+        'left': '0',
+        'margin-right': '0'
+    });
+
+    $('.header__bottom .container').css({
+        'justify-content': 'space-between',
+    });
+
+    clickedOnce = false; // Holatni yana boshlang‘ich holatga qaytaramiz
+});
+
+}
+    
+
 
 $(window).click(function (e) {
     if (!$(e.target).closest('.catalog, .header__catalog').length) { 
@@ -37,17 +126,24 @@ $(window).click(function (e) {
 
   
   $('.catalog__menu-item a').click(function () {
+    $('.catalog .container').addClass('is-open')
     $('.catalog__menu-item a').removeClass('active')
         $('.catalog__menu-content').fadeOut(0)/
         $(this).addClass('active')
         $($(this).attr('href')).fadeIn()
   });
+  $('.catalog__content_top').click(function(){
+    $('.catalog .container').removeClass('is-open')
+  })
   const catalog_slider = new Swiper('.catalog_slider',{
     spaceBetween:40,
     slidesPerView:6,
     breakpoints: {
         0: {
-            slidesPerView: 1.2,
+            slidesPerView: 3,
+        },
+        556: {
+            slidesPerView: 2.5,
         },
         768: {
             slidesPerView: 3,
@@ -227,8 +323,11 @@ $(".brands__tabs--buttons .button").click(function () {
            
         },
         breakpoints: {
-            1200: {
+            1440: {
                 slidesPerView: 3,
+            },
+            1200: {
+                slidesPerView: 2.4,
             },
             768:{
                 slidesPerView: 2,
@@ -285,3 +384,4 @@ $(".brands__tabs--buttons .button").click(function () {
     
     });
 });
+console.warn = function() {};

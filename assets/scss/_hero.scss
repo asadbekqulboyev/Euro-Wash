@@ -1,8 +1,4 @@
 .hero{
-    .row{
-        display: flex;
-        flex-direction: column;
-    }
     &__main{
         display: flex;
         gap: 0 24px;
@@ -11,7 +7,7 @@
             gap: 48px;
         }
 
-        .swiper-container {
+        &-slider {
             display: flex;
             flex-direction: column;
             gap: 15px 0;
