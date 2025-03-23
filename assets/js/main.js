@@ -149,6 +149,105 @@ function header_location() {
     })
 }
 header_location();
+// function brands() { 
+
+//     let defaultSwiper = $(".brands__tabs--tab_contents .content.active .swiper");
+//     if (defaultSwiper.length > 0) {
+//         new Swiper(defaultSwiper[0], {
+//             slidesPerView: 1,
+//             spaceBetween: 24,
+//             loop: true,
+//             grid: {
+//                 rows: 2,
+//                 fill: "row",
+//             },
+//             breakpoints: {
+//                 980: {
+//                     slidesPerView: 2,
+//                 },
+//                 480 :{
+//                     grid: {
+//                         rows: 3
+//                     }
+//                 }
+    
+//             },
+//         });
+//     }
+//     $(".brands__tabs--buttons .button").click(function () {
+//         let target = $(this).data("tab");
+    
+//         $(".brands__tabs--buttons .button").removeClass("active");
+//         $(this).addClass("active");
+//         $(".brands__tabs--tab_contents .content").css("opacity", 0);
+//         setTimeout(() => {
+//             $(".brands__tabs--tab_contents .content").removeClass("active");
+//             $("#" + target).addClass("active").css("opacity", 1);
+//             let tabsSwiper = $("#" + target).find(".swiper");
+//             if (tabsSwiper.length > 0) {
+//                 new Swiper(tabsSwiper[0], {
+//                     slidesPerView: 1.5,
+//                     spaceBetween: 24,
+//                     loop: true,
+//                     grid: {
+//                         rows: 2,
+//                         fill: "row",
+//                     },
+//                     breakpoints: {
+//                         0: {
+//                             slidesPerView: 1.2,
+//                             grid:{
+//                                 rows: 1
+//                             },
+//                         },
+//                         980: {
+//                             slidesPerView: 2,
+//                         },
+                        
+//                     },
+//                 });
+//             }
+//         }, 0);
+//     });
+//     var buttonsSwiper = new Swiper(".buttonSwiper", {
+//             loop: true, 
+//             spaceBetween: 10, 
+//             slidesPerView: 2.9,
+//             navigation: {
+//                 nextEl: ".main-swiper-next",
+//                 prevEl: ".main-swiper-prev",
+//             },
+//             pagination: {
+//                 el: ".main-swiper-pagination",
+//                 clickable: true,
+//             },
+//             breakpoints: {
+               
+//                 980: {
+//                     slidesPerView: 5,
+//                     spaceBetween: 20,
+//                 },
+//             }
+//     });
+//     if (innerWidth < 980) {
+//         defaultSwiper[0].swiper = new Swiper(defaultSwiper[0] ,{
+//             breakpoints: {
+//                 spaceBetween:24,
+//                 0: {
+//                     grid: {
+//                         rows: 1,
+//                         fill: "row",
+//                         spaceBetween: 0
+//                     },
+//                 }
+//             }
+//         })
+        
+//     }
+  
+// }
+//  brands()
+
 function brands() { 
 
     let defaultSwiper = $(".brands__tabs--tab_contents .content.active .swiper");
@@ -165,26 +264,28 @@ function brands() {
                 980: {
                     slidesPerView: 2,
                 },
-                480 :{
+                0: { // 980px dan kichik ekranda 1ta qatorda 1.2 slide bo‘lib harakatlanadi
+                    slidesPerView: 1.2,
+                    spaceBetween: 10,
                     grid: {
                         rows: 1
                     }
                 }
-    
             },
         });
     }
+
     $(".brands__tabs--buttons .button").click(function () {
         let target = $(this).data("tab");
-    
+
         $(".brands__tabs--buttons .button").removeClass("active");
         $(this).addClass("active");
-    
         $(".brands__tabs--tab_contents .content").css("opacity", 0);
+        
         setTimeout(() => {
             $(".brands__tabs--tab_contents .content").removeClass("active");
             $("#" + target).addClass("active").css("opacity", 1);
-    
+
             let tabsSwiper = $("#" + target).find(".swiper");
             if (tabsSwiper.length > 0) {
                 new Swiper(tabsSwiper[0], {
@@ -196,47 +297,46 @@ function brands() {
                         fill: "row",
                     },
                     breakpoints: {
-                        0: {
+                        0: { // 980px dan kichik ekranda 1.2 slayd
                             slidesPerView: 1.2,
+                            spaceBetween: 10,
                             grid: {
-                                rows: 1,
-                                fill: "column",
-                            },
+                                rows: 1
+                            }
                         },
                         980: {
                             slidesPerView: 2,
                         },
-                        // 480 :{
-                        //     grid: {
-                        //         rows: 1
-                        //     }
-                        // }
                     },
                 });
             }
         }, 0);
     });
+
     var buttonsSwiper = new Swiper(".buttonSwiper", {
-            loop: true, 
-            spaceBetween: 10, 
-            slidesPerView: 2.9,
-            navigation: {
-                nextEl: ".main-swiper-next",
-                prevEl: ".main-swiper-prev",
+        loop: true, 
+        spaceBetween: 10, 
+        slidesPerView: 2.9,
+        navigation: {
+            nextEl: ".main-swiper-next",
+            prevEl: ".main-swiper-prev",
+        },
+        pagination: {
+            el: ".main-swiper-pagination",
+            clickable: true,
+        },
+        breakpoints: {
+            980: {
+                slidesPerView: 5,
+                spaceBetween: 20,
             },
-            pagination: {
-                el: ".main-swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                980: {
-                    slidesPerView: 5,
-                    spaceBetween: 20,
-                },
-            }
+        }
     });
- }
- brands()
+}
+
+brands();
+
+
 function sliders() {
     var swiper = new Swiper(".mainSwiper", {
             loop: true, 
