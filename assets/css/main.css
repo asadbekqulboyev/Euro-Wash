@@ -1803,7 +1803,7 @@ h2 {
   text-decoration: none;
   color: inherit;
 }
-.benifits .row {
+.benifits__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1811,17 +1811,17 @@ h2 {
   align-items: stretch;
 }
 @media (max-width: 980px) {
-  .benifits .row {
+  .benifits__content {
     flex-wrap: wrap;
     gap: 24px 0;
   }
 }
 @media (max-width: 480px) {
-  .benifits .row {
+  .benifits__content {
     gap: 10px;
   }
 }
-.benifits .row .benefits__item {
+.benifits__item {
   display: flex;
   flex-direction: column;
   gap: 20px 0;
@@ -1835,34 +1835,39 @@ h2 {
   padding-bottom: 36px;
 }
 @media (max-width: 768px) {
-  .benifits .row .benefits__item {
+  .benifits__item {
     padding: 20px 0;
   }
 }
 @media (max-width: 980px) {
-  .benifits .row .benefits__item {
+  .benifits__item {
     flex: unset;
     width: calc(33.3333% - 12px);
   }
 }
 @media (max-width: 480px) {
-  .benifits .row .benefits__item {
+  .benifits__item {
     width: calc(50% - 5px);
   }
 }
-.benifits .row .benefits__item img {
+.benifits__item img {
   width: 70px;
   height: 70px;
   flex-shrink: 0;
 }
 @media (max-width: 768px) {
-  .benifits .row .benefits__item img {
+  .benifits__item img {
     width: 40px;
     height: 40px;
   }
 }
-.benifits .row .benefits__item span {
+.benifits__item-title {
   text-align: center;
+}
+@media (max-width: 768px) {
+  .benifits__item-title {
+    font-size: 14px;
+  }
 }
 
 .ceo {
@@ -1873,7 +1878,7 @@ h2 {
     margin: 40px 0;
   }
 }
-.ceo .row {
+.ceo__content {
   padding: 40px;
   border-radius: 20px;
   background-color: var(--white);
@@ -1881,28 +1886,28 @@ h2 {
   flex-direction: column;
 }
 @media (max-width: 768px) {
-  .ceo .row {
+  .ceo__content {
     padding: 20px;
   }
 }
-.ceo .row h2 {
+.ceo__content-title {
   margin-bottom: 24px;
 }
 @media (max-width: 768px) {
-  .ceo .row h2 {
+  .ceo__content-title {
     margin-bottom: 10px;
   }
 }
-.ceo .row p {
+.ceo__content-description {
   line-height: 24px;
   margin-bottom: 24px;
 }
 @media (max-width: 768px) {
-  .ceo .row p {
+  .ceo__content-description {
     margin-bottom: 10px;
   }
 }
-.ceo .row p:last-child {
+.ceo__content-description:last-child {
   margin-bottom: 0;
 }
 
