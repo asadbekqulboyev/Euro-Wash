@@ -70,6 +70,22 @@ function header_bottom (){
         clickedOnce = false; // Holatni yana boshlang‘ich holatga qaytaramiz
     });
     }
+    let searchInput = $(".header__bottom_form__input");
+    let searchResults = $(".search__results");
+
+    // Inputga fokus bo'lsa natijalarni ko'rsatish
+    searchInput.on("focus", function() {
+        searchResults.fadeIn();
+    });
+    searchInput.on("focusout", function() {
+        searchResults.fadeOut();
+    });
+    // Inputdan tashqariga bosganda natijalarni yashirish
+    // $(document).on("click", function(event) {
+    //     if (!$(event.target).closest(".header__bottom-form").length) {
+    //         searchResults.fadeOut();
+    //     }
+    // });
 }
 header_bottom()
 function initCatalog() {
@@ -436,5 +452,29 @@ function sliders() {
     });
 }
 sliders()
+function modals() { 
+    $("[data-fancybox]").fancybox({
+        touch: false,
+        autoFocus: false,
+        animationEffect: "fade",
+        transitionEffect: "slide",
+        buttons: ["close"],
+        smallBtn: false, 
+        clickOutside: true, // Fonga bosilganda yopish
+    });
+
+    // Yopish tugmasi bosilganda modalni yopish
+    $(".modal_close").on("click", function() {
+        $.fancybox.close();
+    });
+
+    // FON (overlay) bosilganda modalni yopish
+    $(".modal__overlay").on("click", function () {
+        $.fancybox.close(); // Fancybox modalni yopish
+    });
+}
+
+modals();
+
 });
 console.warn = function() {};

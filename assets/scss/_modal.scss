@@ -38,7 +38,7 @@
 
 .header__modal{
     &-title {
-        font-size: 30px;
+        font-size: var(--h1);
         font-weight: bold;
         margin-bottom: 10px;
         font-weight: var(--bold);
@@ -101,4 +101,233 @@ form{
 .heder_dropdown.is-active {
     display: block;
     opacity: 1;
+}
+.fancybox-content{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 27, 43, 0.50);
+}
+.fancybox-button{
+    display: none !important;
+}
+.modal{
+    
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 10px;
+    display: none;
+    &_overlay{
+        height: 100%;
+        width: 100%;
+    }
+    &_close{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+    &__form{
+        border-radius: 10px;
+        background: #FFF;
+        padding: 24px;
+        width: 100% ;
+        max-width: 424px;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin:  auto;
+        height: fit-content;
+        &-inputs{
+            margin-bottom: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            input:not([type=checkbox]) {
+                border-radius: 10px;
+                background: var(--light-gray);
+                border: none;
+                padding: 12px 24px;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: var(--medium);
+                outline: none;
+                width: 100%;
+            }
+            
+        }
+        .checkbox {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: #333;
+            
+            &__input {
+                display: none;
+        
+                &:checked + .checkbox__box {
+                    background-color: #22c55e;
+                    border-color: #22c55e;
+        
+                    &::after {
+                        content: "✔";
+                        display: block;
+                        color: white;
+                        font-size: 14px;
+                        font-weight: bold;
+                        text-align: center;
+                        line-height: 16px;
+                    }
+                }
+            }
+        
+            &__box {
+                width: 16px;
+                height: 16px;
+                border: 2px solid #ccc;
+                border-radius: 4px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+            }
+        
+            &__text {
+                color: #787878;;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                &_bold {
+                    color: var(--main-color);
+                    text-decoration: underline;
+                }
+            }
+        }
+        .social-login__title {
+            color: var(--main-color);
+            text-align: center;
+            font-family: Inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            margin-top: 20px;
+            position: relative;
+           width: 100%;
+            span{
+            padding: 0 12px;
+            background: #fff;
+            position: relative;
+            z-index: 2;
+            }
+            &::after {
+                content: '';
+                display: block;
+                width: 100%;
+                height: 1px;
+                background: #E0E0E0;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                opacity: 0.05;
+                background: #2B2A29;
+            }
+        }
+        
+        .social-login {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 12px;
+
+            &__item {
+                width: 60px;
+                height: 60px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background: #f5f5f5;
+                border-radius: 12px;
+                transition: background 0.3s ease;
+                @media (max-width:768px) {
+                    height: 40px;    
+                }
+                &:hover {
+                    background: #e0e0e0;
+                }
+        
+                &--ok .social-login__icon { width: 32px; 
+                @media (max-width:768px) {
+                    width: 20px;
+                }
+                }
+                &--vk .social-login__icon { width: 36px; 
+                @media (max-width:768px) {
+                    width: 20px;
+                }
+                }
+                &--ya .social-login__icon { width: 30px; 
+                @media (max-width:768px) {
+                    width: 20px;
+                }
+                }
+                &--mail .social-login__icon { width: 32px; 
+                @media (max-width:768px) {
+                    width: 20px;
+                }
+                }
+                &--google .social-login__icon { width: 34px;
+                @media (max-width:768px) {
+                    width: 20px;
+                }
+                }
+            }
+        
+            &__icon {
+                display: block;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+        
+        
+    }
+    &__title{
+        font-size: var(--h1);
+        font-weight: bold;
+        margin-bottom: 10px;
+        font-weight: var(--bold);
+        text-align: left;
+        font-family: "Inter", sans-serif;
+        @media (max-width:768px) {
+            font-size:var(--h2); ;
+        }
+    }
+
+    &__description{
+        margin-bottom: 20px;
+        color: var(--main-color);
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @media (max-width:768px) {
+            font-size: var(--small-text);
+        }
+    }
+
+
 }

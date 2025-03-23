@@ -8,9 +8,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/themes/base/jquery-ui.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="assets/images/loog.svg" sizes="any">
     <link
         href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css">
     <link rel="stylesheet" href="assets/css/main.css">
 </head>
@@ -151,14 +154,66 @@
                             <span>Каталог</span>
                         </div>
                         <form action="" class="header__bottom_form">
-                            <input type="text">
+                            <input type="text" class="header__bottom_form__input" >
                             <button class="header__bottom_form-button">
                                 <img src="assets/images/Search.svg" class="search_icon" alt="searchIcon">
                             </button>
-                            
-                                <img src="assets/images/menu_close.svg" alt="" class="header__bottom_form__close">
-                      
-                            
+                            <img src="assets/images/menu_close.svg" alt="" class="header__bottom_form__close">
+                            <!-- search result history -->
+                            <div class="search__results history">
+                                <h2 class="search__title">Часто ищут</h2>
+                                <ul class="history__lists">
+                                    <li class="history__list" ><a class="history__list-link" href="#">Мойки Smeg</a></li>
+                                    <li class="history__list" ><a class="history__list-link" href="#">Мойки Smeg</a></li>
+                                    <li class="history__list" ><a class="history__list-link" href="#">Мойки Smeg</a></li>
+                                    <li class="history__list" ><a class="history__list-link" href="#">Мойки Smeg</a></li>
+                                    <li class="history__list" ><a class="history__list-link" href="#">Мойки Smeg</a></li>
+                                </ul>
+                            </div>
+                            <!-- search result not found -->
+                            <div class="search__results not_found">
+                                <h2 class="search__title">Ничего не найдено</h2>
+                            </div>
+                            <!-- search result product lists -->
+                             <div class="search__results">
+                                <div class="search__results_top">
+                                    <p class="search__count">Найдено <strong>65</strong> товаров</p>
+                                    <a href="#" class="button blue">Все результаты поиска</a>
+                                </div>
+                                <ul class="search__list">
+                                    <li class="search__item">
+                                        <a href="#" class="search__link">
+                                            <img src="assets/images/search_result_icon.png" alt="Мойка Smeg" class="search__image" />
+                                            <div class="search__info">
+                                                <h4 class="search__title">Мойка Smeg</h4>
+                                                <span class="search__availability">✔ В наличии</span>
+                                            </div>
+                                        </a>
+                                        <span class="search__price">79 900 руб.</span>
+                                    </li>
+                                    <li class="search__item">
+                                        <a href="#" class="search__link">
+                                            <img src="assets/images/search_result_icon.png" alt="Мойка Smeg" class="search__image" />
+                                            <div class="search__info">
+                                                <h4 class="search__title">Мойка Smeg</h4>
+                                                <span class="search__availability">✔ В наличии</span>
+                                            </div>
+                                        </a>
+                                        <span class="search__price">79 900 руб.</span>
+                                    </li>
+                                    <li class="search__item">
+                                        <a href="#" class="search__link">
+                                            <img src="assets/images/search_result_icon.png" alt="Мойка Smeg" class="search__image" />
+                                            <div class="search__info">
+                                                <h4 class="search__title">Мойка Smeg</h4>
+                                                <span class="search__availability">✔ В наличии</span>
+                                            </div>
+                                        </a>
+                                        <span class="search__price">79 900 руб.</span>
+                                    </li>
+                                </ul>
+                             </div> 
+
                         </form>
                         <div class="header__bottom-actions">
                             <a href="#">
@@ -184,7 +239,7 @@
                                 </svg>
                                 <p>Сравнение</p>
                             </a>
-                            <a href="#">
+                            <a href="#register" id="open__register" data-fancybox >
                                 <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 21 21"
                                     fill="none">
                                     <path
@@ -1874,9 +1929,18 @@
                                     </div>
                                     <div class="swiper-slide__discount">
                                         <span>-25%</span>
-                                        <div>
+                                        <div class="slide__info">
                                             <img src="assets/images/small-e.svg" alt="small-e">
                                             <p>+349</p>
+                                            <div class="slide__info-content">
+                                                <div class="slide__info__title">
+                                                    Бонусные рубли за покупку
+                                                </div>
+                                                <p class="slide__info__description">
+                                                    Начисляются после получения заказа и станут доступны через 15 дней.
+                                                </p>
+                                                <a href="#" class="slide__info__link">Все условия программы</a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide__info">
@@ -1946,79 +2010,9 @@
                                                 <div class="swiper-slide">
                                                     <img src="assets/images/discount-product.png" alt="">
                                                 </div>
-                                            </div>
-                                            <div class="image-swiper-pagination"></div>
-                                        </div>
-
-                                    </div>
-                                    <div class="swiper-slide__discount">
-                                        <span>-25%</span>
-                                        <div>
-                                            <img src="assets/images/small-e.svg" alt="small-e">
-                                            <p>+349</p>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide__info">
-                                        <div>
-                                            <img src="assets/images/black-check.svg" alt="check">
-                                            <span>В наличии</span>
-                                        </div>
-                                        <div>
-                                            <img src="assets/images/Truck.svg" alt="check">
-                                            <span>Бесплатная доставка</span>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide__type">
-                                        <span>Встраиваемая вытяжка</span>
-                                        <p>Askoocoasadda CC4527S</p>
-                                    </div>
-                                    <div class="swiper-slide__price">
-                                        <p>79 900 руб.</p>
-                                        <span>79 900 руб.</span>
-                                    </div>
-                                    <div class="swiper-slide__buttons">
-                                        <a href="#" class="swiper-slide__saving button blue">
-                                            <img src="assets/images/basket.svg" class="basket-icon" alt="basket">
-                                            <img src="assets/images/check.svg" class="check-icon" alt="checked">
-                                            <span>В корзину</span>
-                                        </a>
-                                        <div class="heart">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
-                                                viewBox="0 0 22 20" fill="none">
-                                                <path
-                                                    d="M3.31017 3.1433C1.34111 5.11237 1.34111 8.30485 3.31017 10.2739L10.9475 17.9113L11 17.8588L11.0526 17.9113L18.69 10.274C20.659 8.30491 20.659 5.11243 18.69 3.14337C16.7209 1.1743 13.5284 1.1743 11.5594 3.14337L11.3537 3.34907C11.1584 3.54433 10.8418 3.54433 10.6465 3.34907L10.4408 3.1433C8.47172 1.17424 5.27923 1.17424 3.31017 3.1433Z"
-                                                    stroke="#001B2B" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                        <div class="chart">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                viewBox="0 0 20 20" fill="none">
-                                                <path d="M5.41669 10V18.3333" stroke="#001B2B" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M10.4167 6.6665V18.3332" stroke="#001B2B" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M15.4167 1.6665V18.3332" stroke="#001B2B" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-slide__rating">
-                                        <div class="swiper-slide__rating--condition">
-                                            <p>Хит</p>
-                                            <span>Новинка</span>
-                                        </div>
-                                        <div class="swiper-slide__rating--stars">
-                                            <img src="assets/images/star.svg" alt="star">
-                                            <p>4.7</p>
-                                            <span>362 оценки</span>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide__image">
-                                        <div class="swiper imageSwiper">
-                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
                                                 <div class="swiper-slide">
                                                     <img src="assets/images/discount-product.png" alt="">
                                                 </div>
@@ -2029,9 +2023,18 @@
                                     </div>
                                     <div class="swiper-slide__discount">
                                         <span>-25%</span>
-                                        <div>
+                                        <div class="slide__info">
                                             <img src="assets/images/small-e.svg" alt="small-e">
                                             <p>+349</p>
+                                            <div class="slide__info-content">
+                                                <div class="slide__info__title">
+                                                    Бонусные рубли за покупку
+                                                </div>
+                                                <p class="slide__info__description">
+                                                    Начисляются после получения заказа и станут доступны через 15 дней.
+                                                </p>
+                                                <a href="#" class="slide__info__link">Все условия программы</a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide__info">
@@ -2098,6 +2101,15 @@
                                                 <div class="swiper-slide">
                                                     <img src="assets/images/discount-product.png" alt="">
                                                 </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
                                             </div>
                                             <div class="image-swiper-pagination"></div>
                                         </div>
@@ -2105,9 +2117,112 @@
                                     </div>
                                     <div class="swiper-slide__discount">
                                         <span>-25%</span>
-                                        <div>
+                                        <div class="slide__info">
                                             <img src="assets/images/small-e.svg" alt="small-e">
                                             <p>+349</p>
+                                            <div class="slide__info-content">
+                                                <div class="slide__info__title">
+                                                    Бонусные рубли за покупку
+                                                </div>
+                                                <p class="slide__info__description">
+                                                    Начисляются после получения заказа и станут доступны через 15 дней.
+                                                </p>
+                                                <a href="#" class="slide__info__link">Все условия программы</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide__info">
+                                        <div>
+                                            <img src="assets/images/black-check.svg" alt="check">
+                                            <span>В наличии</span>
+                                        </div>
+                                        <div>
+                                            <img src="assets/images/Truck.svg" alt="check">
+                                            <span>Бесплатная доставка</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide__type">
+                                        <span>Встраиваемая вытяжка</span>
+                                        <p>Asko CC4527S</p>
+                                    </div>
+                                    <div class="swiper-slide__price">
+                                        <p>79 900 руб.</p>
+                                        <span>79 900 руб.</span>
+                                    </div>
+                                    <div class="swiper-slide__buttons">
+                                        <a href="#" class="swiper-slide__saving button blue">
+                                            <img src="assets/images/basket.svg" class="basket-icon" alt="basket">
+                                            <img src="assets/images/check.svg" class="check-icon" alt="checked">
+                                            <span>В корзину</span>
+                                        </a>
+                                        <div class="heart">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                                                viewBox="0 0 22 20" fill="none">
+                                                <path
+                                                    d="M3.31017 3.1433C1.34111 5.11237 1.34111 8.30485 3.31017 10.2739L10.9475 17.9113L11 17.8588L11.0526 17.9113L18.69 10.274C20.659 8.30491 20.659 5.11243 18.69 3.14337C16.7209 1.1743 13.5284 1.1743 11.5594 3.14337L11.3537 3.34907C11.1584 3.54433 10.8418 3.54433 10.6465 3.34907L10.4408 3.1433C8.47172 1.17424 5.27923 1.17424 3.31017 3.1433Z"
+                                                    stroke="#001B2B" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="chart">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <path d="M5.41669 10V18.3333" stroke="#001B2B" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M10.4167 6.6665V18.3332" stroke="#001B2B" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M15.4167 1.6665V18.3332" stroke="#001B2B" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide__rating">
+                                        <div class="swiper-slide__rating--condition">
+                                            <p>Хит</p>
+                                            <span>Новинка</span>
+                                        </div>
+                                        <div class="swiper-slide__rating--stars">
+                                            <img src="assets/images/star.svg" alt="star">
+                                            <p>4.7</p>
+                                            <span>362 оценки</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide__image">
+                                        <div class="swiper imageSwiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="image-swiper-pagination"></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-slide__discount">
+                                        <span>-25%</span>
+                                        <div class="slide__info">
+                                            <img src="assets/images/small-e.svg" alt="small-e">
+                                            <p>+349</p>
+                                            <div class="slide__info-content">
+                                                <div class="slide__info__title">
+                                                    Бонусные рубли за покупку
+                                                </div>
+                                                <p class="slide__info__description">
+                                                    Начисляются после получения заказа и станут доступны через 15 дней.
+                                                </p>
+                                                <a href="#" class="slide__info__link">Все условия программы</a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide__info">
@@ -2212,9 +2327,18 @@
                                     </div>
                                     <div class="swiper-slide__discount">
                                         <span>-25%</span>
-                                        <div>
+                                        <div class="slide__info">
                                             <img src="assets/images/small-e.svg" alt="small-e">
                                             <p>+349</p>
+                                            <div class="slide__info-content">
+                                                <div class="slide__info__title">
+                                                    Бонусные рубли за покупку
+                                                </div>
+                                                <p class="slide__info__description">
+                                                    Начисляются после получения заказа и станут доступны через 15 дней.
+                                                </p>
+                                                <a href="#" class="slide__info__link">Все условия программы</a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide__info">
@@ -2284,79 +2408,9 @@
                                                 <div class="swiper-slide">
                                                     <img src="assets/images/discount-product.png" alt="">
                                                 </div>
-                                            </div>
-                                            <div class="image-swiper-pagination"></div>
-                                        </div>
-
-                                    </div>
-                                    <div class="swiper-slide__discount">
-                                        <span>-25%</span>
-                                        <div>
-                                            <img src="assets/images/small-e.svg" alt="small-e">
-                                            <p>+349</p>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide__info">
-                                        <div>
-                                            <img src="assets/images/black-check.svg" alt="check">
-                                            <span>В наличии</span>
-                                        </div>
-                                        <div>
-                                            <img src="assets/images/Truck.svg" alt="check">
-                                            <span>Бесплатная доставка</span>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide__type">
-                                        <span>Встраиваемая вытяжка</span>
-                                        <p>Askoocoasadda CC4527S</p>
-                                    </div>
-                                    <div class="swiper-slide__price">
-                                        <p>79 900 руб.</p>
-                                        <span>79 900 руб.</span>
-                                    </div>
-                                    <div class="swiper-slide__buttons">
-                                        <a href="#" class="swiper-slide__saving button blue">
-                                            <img src="assets/images/basket.svg" class="basket-icon" alt="basket">
-                                            <img src="assets/images/check.svg" class="check-icon" alt="checked">
-                                            <span>В корзину</span>
-                                        </a>
-                                        <div class="heart">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
-                                                viewBox="0 0 22 20" fill="none">
-                                                <path
-                                                    d="M3.31017 3.1433C1.34111 5.11237 1.34111 8.30485 3.31017 10.2739L10.9475 17.9113L11 17.8588L11.0526 17.9113L18.69 10.274C20.659 8.30491 20.659 5.11243 18.69 3.14337C16.7209 1.1743 13.5284 1.1743 11.5594 3.14337L11.3537 3.34907C11.1584 3.54433 10.8418 3.54433 10.6465 3.34907L10.4408 3.1433C8.47172 1.17424 5.27923 1.17424 3.31017 3.1433Z"
-                                                    stroke="#001B2B" stroke-width="2" stroke-linecap="round"
-                                                    stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                        <div class="chart">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
-                                                viewBox="0 0 20 20" fill="none">
-                                                <path d="M5.41669 10V18.3333" stroke="#001B2B" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M10.4167 6.6665V18.3332" stroke="#001B2B" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                                <path d="M15.4167 1.6665V18.3332" stroke="#001B2B" stroke-width="2"
-                                                    stroke-linecap="round" stroke-linejoin="round" />
-                                            </svg>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="swiper-slide__rating">
-                                        <div class="swiper-slide__rating--condition">
-                                            <p>Хит</p>
-                                            <span>Новинка</span>
-                                        </div>
-                                        <div class="swiper-slide__rating--stars">
-                                            <img src="assets/images/star.svg" alt="star">
-                                            <p>4.7</p>
-                                            <span>362 оценки</span>
-                                        </div>
-                                    </div>
-                                    <div class="swiper-slide__image">
-                                        <div class="swiper imageSwiper">
-                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
                                                 <div class="swiper-slide">
                                                     <img src="assets/images/discount-product.png" alt="">
                                                 </div>
@@ -2367,9 +2421,18 @@
                                     </div>
                                     <div class="swiper-slide__discount">
                                         <span>-25%</span>
-                                        <div>
+                                        <div class="slide__info">
                                             <img src="assets/images/small-e.svg" alt="small-e">
                                             <p>+349</p>
+                                            <div class="slide__info-content">
+                                                <div class="slide__info__title">
+                                                    Бонусные рубли за покупку
+                                                </div>
+                                                <p class="slide__info__description">
+                                                    Начисляются после получения заказа и станут доступны через 15 дней.
+                                                </p>
+                                                <a href="#" class="slide__info__link">Все условия программы</a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide__info">
@@ -2436,6 +2499,15 @@
                                                 <div class="swiper-slide">
                                                     <img src="assets/images/discount-product.png" alt="">
                                                 </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
                                             </div>
                                             <div class="image-swiper-pagination"></div>
                                         </div>
@@ -2443,9 +2515,18 @@
                                     </div>
                                     <div class="swiper-slide__discount">
                                         <span>-25%</span>
-                                        <div>
+                                        <div class="slide__info">
                                             <img src="assets/images/small-e.svg" alt="small-e">
                                             <p>+349</p>
+                                            <div class="slide__info-content">
+                                                <div class="slide__info__title">
+                                                    Бонусные рубли за покупку
+                                                </div>
+                                                <p class="slide__info__description">
+                                                    Начисляются после получения заказа и станут доступны через 15 дней.
+                                                </p>
+                                                <a href="#" class="slide__info__link">Все условия программы</a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide__info">
@@ -2512,6 +2593,15 @@
                                                 <div class="swiper-slide">
                                                     <img src="assets/images/discount-product.png" alt="">
                                                 </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
                                             </div>
                                             <div class="image-swiper-pagination"></div>
                                         </div>
@@ -2519,9 +2609,112 @@
                                     </div>
                                     <div class="swiper-slide__discount">
                                         <span>-25%</span>
-                                        <div>
+                                        <div class="slide__info">
                                             <img src="assets/images/small-e.svg" alt="small-e">
                                             <p>+349</p>
+                                            <div class="slide__info-content">
+                                                <div class="slide__info__title">
+                                                    Бонусные рубли за покупку
+                                                </div>
+                                                <p class="slide__info__description">
+                                                    Начисляются после получения заказа и станут доступны через 15 дней.
+                                                </p>
+                                                <a href="#" class="slide__info__link">Все условия программы</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide__info">
+                                        <div>
+                                            <img src="assets/images/black-check.svg" alt="check">
+                                            <span>В наличии</span>
+                                        </div>
+                                        <div>
+                                            <img src="assets/images/Truck.svg" alt="check">
+                                            <span>Бесплатная доставка</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide__type">
+                                        <span>Встраиваемая вытяжка</span>
+                                        <p>Asko CC4527S</p>
+                                    </div>
+                                    <div class="swiper-slide__price">
+                                        <p>79 900 руб.</p>
+                                        <span>79 900 руб.</span>
+                                    </div>
+                                    <div class="swiper-slide__buttons">
+                                        <a href="#" class="swiper-slide__saving button blue">
+                                            <img src="assets/images/basket.svg" class="basket-icon" alt="basket">
+                                            <img src="assets/images/check.svg" class="check-icon" alt="checked">
+                                            <span>В корзину</span>
+                                        </a>
+                                        <div class="heart">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="20"
+                                                viewBox="0 0 22 20" fill="none">
+                                                <path
+                                                    d="M3.31017 3.1433C1.34111 5.11237 1.34111 8.30485 3.31017 10.2739L10.9475 17.9113L11 17.8588L11.0526 17.9113L18.69 10.274C20.659 8.30491 20.659 5.11243 18.69 3.14337C16.7209 1.1743 13.5284 1.1743 11.5594 3.14337L11.3537 3.34907C11.1584 3.54433 10.8418 3.54433 10.6465 3.34907L10.4408 3.1433C8.47172 1.17424 5.27923 1.17424 3.31017 3.1433Z"
+                                                    stroke="#001B2B" stroke-width="2" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                        <div class="chart">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+                                                viewBox="0 0 20 20" fill="none">
+                                                <path d="M5.41669 10V18.3333" stroke="#001B2B" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M10.4167 6.6665V18.3332" stroke="#001B2B" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                                <path d="M15.4167 1.6665V18.3332" stroke="#001B2B" stroke-width="2"
+                                                    stroke-linecap="round" stroke-linejoin="round" />
+                                            </svg>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="swiper-slide__rating">
+                                        <div class="swiper-slide__rating--condition">
+                                            <p>Хит</p>
+                                            <span>Новинка</span>
+                                        </div>
+                                        <div class="swiper-slide__rating--stars">
+                                            <img src="assets/images/star.svg" alt="star">
+                                            <p>4.7</p>
+                                            <span>362 оценки</span>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide__image">
+                                        <div class="swiper imageSwiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
+                                                <div class="swiper-slide">
+                                                    <img src="assets/images/discount-product.png" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="image-swiper-pagination"></div>
+                                        </div>
+
+                                    </div>
+                                    <div class="swiper-slide__discount">
+                                        <span>-25%</span>
+                                        <div class="slide__info">
+                                            <img src="assets/images/small-e.svg" alt="small-e">
+                                            <p>+349</p>
+                                            <div class="slide__info-content">
+                                                <div class="slide__info__title">
+                                                    Бонусные рубли за покупку
+                                                </div>
+                                                <p class="slide__info__description">
+                                                    Начисляются после получения заказа и станут доступны через 15 дней.
+                                                </p>
+                                                <a href="#" class="slide__info__link">Все условия программы</a>
+                                            </div>
                                         </div>
                                     </div>
                                     <div class="swiper-slide__info">
@@ -2665,7 +2858,6 @@
                 </div>
             </section>
         </main>
-
         <!-- footer -->
         <footer class="footer">
             <div class="footer__container container">
@@ -2793,9 +2985,84 @@
             </div>
         </footer>
     </div>
+    <div style="display: none;">
+        <div class="modal" id="register">
+            <div class="modal__overlay"></div>
+            <form action="#" class="modal__form">
+                <div class="modal_close">
+                    <img src="assets/images/close.svg" alt="close">
+                </div>
+                <div class="modal__top">
+                    <h4 class="modal__title">Вход или регистрация</h4>   
+                    <p class="modal__description">
+                        Используйте номер телефона или Email, <br>
+                        чтобы войти или зарегистрироваться
+                    </p>
+                </div>
+                <div class="modal__form-inputs">
+                    <input type="text" placeholder="Телефон или email" name="phone_or_email" required>
+                </div>
+    
+                <button class="button blue">Получить код</button>
+                <label class="checkbox">
+                    <input type="checkbox" class="checkbox__input" checked required>
+                    <span class="checkbox__box"></span>
+                    <span class="checkbox__text">
+                        Принимаю условия <a href="#" class="checkbox__text_bold">предоставления данных</a>
+                    </span>
+                </label>
+                <h2 class="social-login__title"><span>Войти с помощью</span> </h2>
+                <div class="social-login">
+                    <a href="#" class="social-login__item social-login__item--ok">
+                        <img src="assets/images/social1.svg" alt="Odnoklassniki" class="social-login__icon">
+                    </a>
+                    <a href="#" class="social-login__item social-login__item--vk">
+                        <img src="assets/images/social2.svg" alt="VK" class="social-login__icon">
+                    </a>
+                    <a href="#" class="social-login__item social-login__item--ya">
+                        <img src="assets/images/social3.svg" alt="Yandex" class="social-login__icon">
+                    </a>
+                    <a href="#" class="social-login__item social-login__item--mail">
+                        <img src="assets/images/social4.svg" alt="Mail.ru" class="social-login__icon">
+                    </a>
+                    <a href="#" class="social-login__item social-login__item--google">
+                        <img src="assets/images/social5.svg" alt="Google" class="social-login__icon">
+                    </a>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="modal" id="login">
+        <div class="modal__overlay"></div>
+        <form action="#" class="modal__form">
+            <div class="modal_close">
+                <img src="assets/images/close.svg" alt="close">
+            </div>
+            <div class="modal__top">
+                <h4 class="modal__title">Обратный звонок</h4>   
+                <p class="modal__description">
+                    Если у вас возникли вопросы или вы столкнулись с какими-либо трудностями на любом этапе заказа, мы с радостью вам поможем.
+                </p>
+            </div>
+            <div class="modal__form-inputs">
+                <input type="text" placeholder="Ваше имя" name="name" required>
+                <input type="text" placeholder="Телефон" name="phone" required>
+            </div>
+            <button class="button blue">Отправить</button>
+            <label class="checkbox">
+                <input type="checkbox" class="checkbox__input" checked required>
+                <span class="checkbox__box"></span>
+                <span class="checkbox__text">
+                    Принимаю условия <a href="#" class="checkbox__text_bold">предоставления данных</a>
+                </span>
+            </label>
+           
+        </form>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
