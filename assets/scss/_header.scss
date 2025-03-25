@@ -640,6 +640,12 @@
         font-style: normal;
         font-weight: 400;
         line-height: normal;
+        &:first-child{
+            display: none;
+            @media (max-width:556px) {
+                display: block;
+            }
+        }
         a{
             display: flex;
             align-items: center;

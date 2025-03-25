@@ -777,6 +777,14 @@ body {
   font-weight: 400;
   line-height: normal;
 }
+.header .catalog__menu-item:first-child {
+  display: none;
+}
+@media (max-width: 556px) {
+  .header .catalog__menu-item:first-child {
+    display: block;
+  }
+}
 .header .catalog__menu-item a {
   display: flex;
   align-items: center;
