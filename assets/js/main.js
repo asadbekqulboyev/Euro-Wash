@@ -80,12 +80,6 @@ function header_bottom (){
     searchInput.on("focusout", function() {
         searchResults.fadeOut();
     });
-    // Inputdan tashqariga bosganda natijalarni yashirish
-    // $(document).on("click", function(event) {
-    //     if (!$(event.target).closest(".header__bottom-form").length) {
-    //         searchResults.fadeOut();
-    //     }
-    // });
 }
 header_bottom()
 function initCatalog() {

@@ -17,7 +17,7 @@
     background: white;
     padding: 24px;
     border-radius: 8px;
-    width: 620px;
+    width: 6var(--h2);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -76,7 +76,7 @@ form{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: var(--h2);
     max-height: 200px;
     overflow-y: auto;
     text-align: center;
@@ -114,7 +114,6 @@ form{
     display: none !important;
 }
 .modal{
-    
     position: fixed;
     top: 0;
     left: 0;
@@ -138,7 +137,7 @@ form{
     }
     &__form{
         border-radius: 10px;
-        background: #FFF;
+        background: var(--white);
         padding: 24px;
         width: 100% ;
         max-width: 424px;
@@ -150,7 +149,7 @@ form{
         margin:  auto;
         height: fit-content;
         &-inputs{
-            margin-bottom: 20px;
+            margin-bottom: var(--h2);
             display: flex;
             flex-direction: column;
             gap: 10px;
@@ -168,13 +167,12 @@ form{
             
         }
         .checkbox {
-            margin-top: 20px;
+            margin-top: var(--h2);
             display: flex;
             align-items: center;
             gap: 8px;
             font-size: 14px;
             color: #333;
-            
             &__input {
                 display: none;
         
@@ -183,12 +181,12 @@ form{
                     border-color: #22c55e;
         
                     &::after {
-                        content: "✔";
+                        content: "✓";
                         display: block;
                         color: white;
-                        font-size: 14px;
-                        font-weight: bold;
+                        font-size: 12px;
                         text-align: center;
+                        font-family: sans-serif;
                         line-height: 16px;
                     }
                 }
@@ -224,12 +222,12 @@ form{
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
-            margin-top: 20px;
+            margin-top: var(--h2);
             position: relative;
            width: 100%;
             span{
             padding: 0 12px;
-            background: #fff;
+            background: var(--white);
             position: relative;
             z-index: 2;
             }
@@ -271,27 +269,27 @@ form{
         
                 &--ok .social-login__icon { width: 32px; 
                 @media (max-width:768px) {
-                    width: 20px;
+                    width: var(--h2);
                 }
                 }
                 &--vk .social-login__icon { width: 36px; 
                 @media (max-width:768px) {
-                    width: 20px;
+                    width: var(--h2);
                 }
                 }
                 &--ya .social-login__icon { width: 30px; 
                 @media (max-width:768px) {
-                    width: 20px;
+                    width: var(--h2);
                 }
                 }
                 &--mail .social-login__icon { width: 32px; 
                 @media (max-width:768px) {
-                    width: 20px;
+                    width: var(--h2);
                 }
                 }
                 &--google .social-login__icon { width: 34px;
                 @media (max-width:768px) {
-                    width: 20px;
+                    width: var(--h2);
                 }
                 }
             }
@@ -318,7 +316,7 @@ form{
     }
 
     &__description{
-        margin-bottom: 20px;
+        margin-bottom: var(--h2);
         color: var(--main-color);
         font-size: 14px;
         font-style: normal;

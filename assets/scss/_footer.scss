@@ -1,6 +1,6 @@
 .footer{
     margin: 80px 0 0 0;
-    background-color: #fff;
+    background-color: var(--white);
     padding: 40px 0;
 
     @media (max-width:576px){
@@ -73,7 +73,7 @@
 
         &--links{
             display: flex;
-            gap: 20px;
+            gap: var(--h2);
         }
 
         ul {
@@ -112,7 +112,7 @@
         }
     }
     h4{
-        margin-bottom: 20px;
+        margin-bottom: var(--h2);
     }
     ul{
         list-style: none;
@@ -137,8 +137,8 @@
         border-top: 1px solid #f6f6f6;
 
         @media (max-width:576px){
-            padding-top: 20px;
-            margin-top: 20px;
+            padding-top: var(--h2);
+            margin-top: var(--h2);
         }
 
         .container {

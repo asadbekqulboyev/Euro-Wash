@@ -18,6 +18,10 @@
         a{
             text-decoration: none;
             color: inherit;
+            transition: all .2s linear;
+            &:hover{
+                color: var(--light-blue);
+            }
         }
     }
     &__content{
@@ -44,7 +48,7 @@
          flex: 1 0 0;
          height: auto;
          background-color: var(--white);
-         border-radius: 20px;
+         border-radius: var(--h2);
          justify-content: center;
          padding-top: 36px;
          padding-bottom: 36px;
@@ -90,13 +94,13 @@
 
     &__content {
         padding: 40px;
-        border-radius: 20px;
+        border-radius: var(--h2);
         background-color: var(--white);
         display: flex;
         flex-direction: column;
 
         @media (max-width:768px){
-            padding: 20px;
+            padding: var(--h2);
         }
         
         &-title{

@@ -39,10 +39,10 @@
                 .swiper-slide {
                     display: flex;
                     justify-content: space-between;
-                    background-color: #3CB2F2;
+                    background-color: var(--light-blue);
                     justify-content: space-between;
                     align-items: center;
-                    border-radius: 20px;
+                    border-radius: var(--h2);
                     overflow: hidden;
     
                     &__contents{
@@ -52,36 +52,26 @@
                         flex-direction: column;
 
                         @media (max-width:768px){
-                            padding-left: 20px;
+                            padding-left: var(--h2);
                         }
 
                         @media (max-width:576px){
                                 width: 55%;
                         }
-    
-                        h1{
-                            margin-bottom: 10px;
+                        .button{
+                            width: fit-content;
+                        }
+                    }
+                    &__title{
+                        margin-bottom: 10px;
                             font-weight: 700;
                             font-size: 30px;
-                            color: #fff;
+                            color: var(--white);
 
                             @media (max-width:768px){
                                 font-size: 24px;
+                                width: 100%;
                             }
-                        }
-                        p{
-                            font-size: 16px;
-                            color: #fff;
-                            font-weight: var(--medium);
-                            margin-bottom: 20px;
-
-                            @media (max-width:768px){
-                                font-size: 14px;
-                            }
-                        }
-                        a {
-                            width: fit-content;
-                        }
                     }
                     &__image {
                         width: 60%;
@@ -114,6 +104,16 @@
                             right: 0;
                        }
                     }
+                    &__text{
+                        font-size: 16px;
+                        color: var(--white);
+                        font-weight: var(--medium);
+                        margin-bottom: var(--h2);
+
+                        @media (max-width:768px){
+                            font-size: 14px;
+                        }
+                    }
                 }
 
                 .main-swiper-next, .main-swiper-prev {
@@ -137,14 +137,14 @@
                     }
 
                     &:hover{
-                        background-color: #3CB2F2;
+                        background-color: var(--light-blue);
                     }
                 }
                 .main-swiper-next{
-                    right: 20px;
+                    right: var(--h2);
                 }
                 .main-swiper-prev{
-                    left: 20px;
+                    left: var(--h2);
                 }
             }
 
@@ -156,9 +156,9 @@
                 .swiper-slide{
                     display: flex;
                     flex-direction: column;
-                    padding: 20px;
-                    border-radius: 20px;
-                    background-color: #fff;
+                    padding: var(--h2);
+                    border-radius: var(--h2);
+                    background-color: var(--white);
 
                     &__days{
                         display: flex;
@@ -206,7 +206,7 @@
                             padding: 5px;
                             border-radius: 100px;
                             background-color: #F26C6C;
-                            color: #fff;
+                            color: var(--white);
                             font-size: 12px;
                             font-weight: 700;
                         }
@@ -215,7 +215,7 @@
                         display: flex;
                         justify-content: center;
                         flex-direction: column;
-                        margin-top: 20px;
+                        margin-top: var(--h2);
                         span{
                             font-size: 14px;
                             color: var(--gray-color);
@@ -234,7 +234,7 @@
                         gap: 0 5px;
 
                         p{
-                            font-size: 20px;
+                            font-size: var(--h2);
                             font-weight: var(--bold);
                         }
                         span {
@@ -281,20 +281,20 @@
                     transition: .3s all ease;
 
                     &:hover{
-                        background-color: #3CB2F2;
+                        background-color: var(--light-blue);
 
                         svg{
                             path {
-                                stroke: #fff;
+                                stroke: var(--white);
                             }
                         }
                     }
                 }
                 .product-next{
-                    right: 20px;
+                    right: var(--h2);
                 }
                 .product-prev{
-                    left: 20px;
+                    left: var(--h2);
                 }
             }
 
@@ -306,7 +306,7 @@
                 justify-content: center;
 
                 .swiper-pagination-bullet{
-                    width: 20px;
+                    width: var(--h2);
                     height: 2px;
                     background-color: #001B2B;
                     border-radius: 100px;
