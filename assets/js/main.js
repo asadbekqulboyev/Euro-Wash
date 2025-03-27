@@ -28,7 +28,7 @@ function header_menu () {
 }
 header_menu()
 function header_bottom (){
-    if(innerWidth < 456){   
+    if(innerWidth < 768){   
     let clickedOnce = false; 
     $('.header__bottom_form-button').prop('disabled', false);
     $('.header__bottom_form-button').click(function (e) {
