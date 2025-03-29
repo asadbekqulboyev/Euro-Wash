@@ -330,11 +330,10 @@
                     left: 0;
                     right: 0;
                     bottom: 30px;
-                    display: block;
+                    display: none;
                     margin: auto ;
                     background: var(--white);
                     z-index: 2323232321;
-
                 }
                 &__title{
                     font-size: 17px;
@@ -381,6 +380,9 @@
                     .slide__info-content{
                     
                       transform: scale(1);
+                      &::after{
+                        display: block  ;
+                      }
                     }
                 }
             }
@@ -525,6 +527,21 @@
                         width: 196px;
                         height: 137px;
                         margin: 0 auto;
+                    }
+                }
+                .custom-pagination{
+                    height: 100%;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    display:flex;
+                    justify-content: space-between;
+                    width: 100%;z-index: 2;
+                    .custom-dot{
+                        height: 100%;
+                        flex: 1;
+                        display: block;
+                        cursor: pointer;
                     }
                 }
             }

@@ -6,6 +6,11 @@
 @import "benefits";
 @import "footer";
 @import "tabs";
+body{
+    &.is-active{
+        overflow: hidden;
+    }
+}
 .main{
     margin-top: 125px;
 }

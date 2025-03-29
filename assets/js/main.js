@@ -2,6 +2,7 @@ $(document).ready(function () {
 
 function header_menu () {
     $(".header__hamburger").click(function () {
+        $('body').toggleClass("is-active");
         $(".header__mobile_menu").toggleClass("active");
         if($(".header__mobile_menu").hasClass("active")) {
             $(this).children("img").attr("src", "assets/images/menu_close.svg");
@@ -14,6 +15,7 @@ function header_menu () {
     });
     $('.header__catalog').click(function (e) {
         e.preventDefault(); 
+         $('body').toggleClass("is-active");
         $('.catalog_icon').toggleClass('active');
         $('.catalog').toggleClass('active');
         if ($('.catalog').hasClass('active')) {
@@ -403,16 +405,106 @@ function sliders() {
                 },
             },
     });
-    var onsaleSwiper = new Swiper(".imageSwiper", {
-            loop: true, 
-            slidesPerView: 1,
-            pagination: {
-                el: ".image-swiper-pagination",
-                clickable: true,
-            },
-            nested: true,
+    // var onsaleSwiperse = new Swiper(".imageSwiper", {
+    //     loop: true,
+    //     slidesPerView: 1,
+    //     pagination: {
+    //         el: ".image-swiper-pagination",
+    //         clickable: true
+    //     },
+    //     nested: true,
+    //     freeMode: true,
+    //     allowTouchMove: true,
+    // });
+    // // Custom pagination dots hover functionality   
+    // console.log(onsaleSwiperse);
+     
+    // $(".custom-dot").on("mouseenter", function () {
+    //     var index = $(this).data("index");
+    //     // Loop yoqilgan bo‘lsa, slideToLoop ishlatiladi
+    //     onsaleSwiperse.slideTo(index);
+
+    //     // Aktiv classni o‘zgartirish
+    //     $(".custom-dot").removeClass("active");
+    //     $(this).addClass("active");
+    // });
+
+    // var onsaleSwiperse = [];
+
+    // // Har bir `.imageSwiper` uchun yangi Swiper yaratamiz
+    // $(".imageSwiper").each(function (index) {
+    //     var swiperis = new Swiper(this, {
+    //         loop: true,
+    //         slidesPerView: 1,
+    //         pagination: {
+    //             el: ".image-swiper-pagination",
+    //             clickable: true
+    //         },
+    //         nested: true,
+    //         freeMode: true,
+    //         allowTouchMove: true,
+    //     });
+    //     onsaleSwiperse.push(swiperis);
+    // });
+    
+    // // Custom pagination bosilganda tegishli Swiper'ni topamiz
+    //  $(".custom-dot").on("mouseenter", function () {
+    //     var index = $(this).data("index");
+    //     console.log(index);
+    //       // Slayder ichidagi index
+    //     var parentIndex = $(this).closest(".swiper-slide__image").index(".swiper-slide__image");  // Qaysi Swiper
+    //     if (onsaleSwiperse[parentIndex]) {
+    //         onsaleSwiperse[parentIndex].slideTo(index);
+    //     }
+    
+    //     $(this).siblings().removeClass("active");
+    //     $(this).addClass("active");
+    // });
+    var onsaleSwiperse = [];
+
+// Har bir `.imageSwiper` uchun yangi Swiper yaratamiz
+$(".imageSwiper").each(function (index) {
+    var swiperis = new Swiper(this, {
+        loop: true,
+        slidesPerView: 1,
+        pagination: {
+            el: '.image-swiper-pagination', 
+            clickable: true
+        },
+        nested: true,
+        freeMode: true,
+        allowTouchMove: true,
     });
-    var onsaleSwiper = new Swiper(".bestSellerSwiper", {
+
+    // Har bir Swiper'ni massivga saqlaymiz
+    onsaleSwiperse.push({
+        swiper: swiperis, // Swiper obyektini saqlaymiz
+        container: $(this).closest(".swiper-slide__image") // Uning konteynerini saqlaymiz
+    });
+});
+
+// Custom pagination bosilganda tegishli Swiper'ni harakatlantiramiz
+$(".custom-dot").on("mouseenter", function () {
+    var index = $(this).data("index");
+
+    // `.custom-dot` qaysi `.swiper-slide__image` ichida joylashganligini topamiz
+    var parentSwiperContainer = $(this).closest(".swiper-slide__image");
+
+    // Massiv ichidan tegishli Swiper'ni topamiz
+    var targetSwiper = onsaleSwiperse.find(item => item.container.is(parentSwiperContainer));
+
+    // Agar Swiper topilgan bo‘lsa, faqat o‘sha Swiper harakatlanadi
+    if (targetSwiper) {
+        targetSwiper.swiper.slideTo(index);
+    }
+
+    // Faqat shu konteyner ichidagi `.custom-dot` larni yangilaymiz
+    $(this).siblings().removeClass("active");
+    $(this).addClass("active");
+});
+
+    
+    var onsaleSwipers = new Swiper(".bestSellerSwiper", {
             loop: true, 
             slidesPerView: 1.2,
             spaceBetween:10,

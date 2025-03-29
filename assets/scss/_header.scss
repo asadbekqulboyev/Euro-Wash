@@ -176,6 +176,19 @@
         }
         &-menu-item{
             margin: 0;
+            display: flex;
+          
+        }
+        .child{
+            a{
+                @media (max-width:1024px) {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 6px;
+                    
+                }
+            }
         }
         &-link {
             text-decoration: none;

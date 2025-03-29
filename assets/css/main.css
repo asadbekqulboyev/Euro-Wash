@@ -299,6 +299,15 @@ body {
 }
 .header__mobile_menu-menu-item {
   margin: 0;
+  display: flex;
+}
+@media (max-width: 1024px) {
+  .header__mobile_menu .child a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
 }
 .header__mobile_menu-link {
   text-decoration: none;
@@ -1946,7 +1955,7 @@ form {
   left: 0;
   right: 0;
   bottom: 30px;
-  display: block;
+  display: none;
   margin: auto;
   background: var(--white);
   z-index: 2323232321;
@@ -1996,6 +2005,10 @@ form {
 .swiper.onsaleSwiper .swiper-slide .product-box .slide__info:hover .slide__info-content,
 .swiper.bestSellerSwiper .swiper-slide .product-box .slide__info:hover .slide__info-content {
   transform: scale(1);
+}
+.swiper.onsaleSwiper .swiper-slide .product-box .slide__info:hover .slide__info-content::after,
+.swiper.bestSellerSwiper .swiper-slide .product-box .slide__info:hover .slide__info-content::after {
+  display: block;
 }
 .swiper.onsaleSwiper .swiper-slide .product-box__info,
 .swiper.bestSellerSwiper .swiper-slide .product-box__info {
@@ -2162,6 +2175,24 @@ form {
   width: 196px;
   height: 137px;
   margin: 0 auto;
+}
+.swiper.onsaleSwiper .swiper-slide__image .swiper.imageSwiper .custom-pagination,
+.swiper.bestSellerSwiper .swiper-slide__image .swiper.imageSwiper .custom-pagination {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 2;
+}
+.swiper.onsaleSwiper .swiper-slide__image .swiper.imageSwiper .custom-pagination .custom-dot,
+.swiper.bestSellerSwiper .swiper-slide__image .swiper.imageSwiper .custom-pagination .custom-dot {
+  height: 100%;
+  flex: 1;
+  display: block;
+  cursor: pointer;
 }
 .swiper.onsaleSwiper .swiper-slide__image .image-swiper-pagination,
 .swiper.bestSellerSwiper .swiper-slide__image .image-swiper-pagination {
@@ -2822,6 +2853,10 @@ h2 {
   .brands__tabs--tab_contents .content__item--image img {
     object-fit: cover;
   }
+}
+
+body.is-active {
+  overflow: hidden;
 }
 
 .main {
