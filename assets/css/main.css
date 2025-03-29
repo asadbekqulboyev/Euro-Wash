@@ -2010,6 +2010,10 @@ form {
 .swiper.bestSellerSwiper .swiper-slide .product-box .slide__info:hover .slide__info-content::after {
   display: block;
 }
+.swiper.onsaleSwiper .swiper-slide .product-box .slide__info:hover::after,
+.swiper.bestSellerSwiper .swiper-slide .product-box .slide__info:hover::after {
+  display: block;
+}
 .swiper.onsaleSwiper .swiper-slide .product-box__info,
 .swiper.bestSellerSwiper .swiper-slide .product-box__info {
   display: flex;
@@ -2192,7 +2196,6 @@ form {
   height: 100%;
   flex: 1;
   display: block;
-  cursor: pointer;
 }
 .swiper.onsaleSwiper .swiper-slide__image .image-swiper-pagination,
 .swiper.bestSellerSwiper .swiper-slide__image .image-swiper-pagination {
