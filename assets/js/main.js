@@ -511,5 +511,18 @@ $('.content_btn').click(function() {
 $(this).fadeOut();
 $('.content__item').fadeIn().css({'display': 'flex'});
  })
+
+function dropdown() {
+    $(".favorites_btn").click(function(){
+        $(".favorites_btn-content").slideToggle(200);
+    });
+    $(document).click(function(event) {
+        if (!$(event.target).closest(".favorites__bottom-btn").length) {
+            $(".favorites_btn-content").slideUp(200);
+        }
+    });
+
+ }
+ dropdown()
 });
 console.warn = function() {}

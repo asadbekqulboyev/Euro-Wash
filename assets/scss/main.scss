@@ -10,6 +10,8 @@
 // pgaes
 @import "brands";
 @import "catalog";
+@import "favorites";
+@import "form";
 body{
     &.is-active{
         overflow: hidden;
