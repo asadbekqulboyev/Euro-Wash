@@ -9,6 +9,10 @@
     src: url('/assets/fonts/PPNeueMontreal-Bold.woff2') format('woff2');
     font-weight: 700;
 }
+@font-face {
+    font-family: 'PP Neue Montreal Medium';
+    src: url('/assets/fonts/PPNeueMontreal-Medium.woff2') format('woff2');
+}
 
 *, ul, ol, p{
     margin: 0;

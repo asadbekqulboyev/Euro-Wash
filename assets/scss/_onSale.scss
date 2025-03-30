@@ -228,6 +228,7 @@
         flex-direction: column;
         overflow: visible !important;
         .product-box{
+           
             &__raiting{
                 display: flex;
                 justify-content: space-between;
@@ -392,7 +393,7 @@
                 display: flex;
                 gap: 0 15px;
                 margin-top: 15px;
-    
+                justify-content: space-between;
                  &--item{
                     display: flex;
                     align-items: center;
@@ -458,7 +459,7 @@
                 display: flex;
                 align-items: center;
                 gap: 0 10px;
-              
+                justify-content: space-between;
                 a{
                     display: flex;
                     text-decoration: none;
@@ -543,6 +544,7 @@
                         height: 100%;
                         flex: 1;
                         display: block;
+                        cursor: pointer;
                     }
                 }
             }

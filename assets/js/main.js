@@ -396,6 +396,7 @@ function sliders() {
                 1440: {
                     slidesPerView: 3,
                 },
+                
                 1200: {
                     slidesPerView: 2.4,
                 },
@@ -405,64 +406,8 @@ function sliders() {
                 },
             },
     });
-    // var onsaleSwiperse = new Swiper(".imageSwiper", {
-    //     loop: true,
-    //     slidesPerView: 1,
-    //     pagination: {
-    //         el: ".image-swiper-pagination",
-    //         clickable: true
-    //     },
-    //     nested: true,
-    //     freeMode: true,
-    //     allowTouchMove: true,
-    // });
-    // // Custom pagination dots hover functionality   
-    // console.log(onsaleSwiperse);
-     
-    // $(".custom-dot").on("mouseenter", function () {
-    //     var index = $(this).data("index");
-    //     // Loop yoqilgan bo‘lsa, slideToLoop ishlatiladi
-    //     onsaleSwiperse.slideTo(index);
 
-    //     // Aktiv classni o‘zgartirish
-    //     $(".custom-dot").removeClass("active");
-    //     $(this).addClass("active");
-    // });
-
-    // var onsaleSwiperse = [];
-
-    // // Har bir `.imageSwiper` uchun yangi Swiper yaratamiz
-    // $(".imageSwiper").each(function (index) {
-    //     var swiperis = new Swiper(this, {
-    //         loop: true,
-    //         slidesPerView: 1,
-    //         pagination: {
-    //             el: ".image-swiper-pagination",
-    //             clickable: true
-    //         },
-    //         nested: true,
-    //         freeMode: true,
-    //         allowTouchMove: true,
-    //     });
-    //     onsaleSwiperse.push(swiperis);
-    // });
-    
-    // // Custom pagination bosilganda tegishli Swiper'ni topamiz
-    //  $(".custom-dot").on("mouseenter", function () {
-    //     var index = $(this).data("index");
-    //     console.log(index);
-    //       // Slayder ichidagi index
-    //     var parentIndex = $(this).closest(".swiper-slide__image").index(".swiper-slide__image");  // Qaysi Swiper
-    //     if (onsaleSwiperse[parentIndex]) {
-    //         onsaleSwiperse[parentIndex].slideTo(index);
-    //     }
-    
-    //     $(this).siblings().removeClass("active");
-    //     $(this).addClass("active");
-    // });
-    var onsaleSwiperse = [];
-
-// Har bir `.imageSwiper` uchun yangi Swiper yaratamiz
+var onsaleSwiperse = [];
 $(".imageSwiper").each(function (index) {
     var swiperis = new Swiper(this, {
         loop: true,
@@ -483,14 +428,9 @@ $(".imageSwiper").each(function (index) {
     });
 });
 
-// Custom pagination bosilganda tegishli Swiper'ni harakatlantiramiz
 $(".custom-dot").on("mouseenter", function () {
     var index = $(this).data("index");
-
-    // `.custom-dot` qaysi `.swiper-slide__image` ichida joylashganligini topamiz
     var parentSwiperContainer = $(this).closest(".swiper-slide__image");
-
-    // Massiv ichidan tegishli Swiper'ni topamiz
     var targetSwiper = onsaleSwiperse.find(item => item.container.is(parentSwiperContainer));
 
     // Agar Swiper topilgan bo‘lsa, faqat o‘sha Swiper harakatlanadi
@@ -506,7 +446,7 @@ $(".custom-dot").on("mouseenter", function () {
     
     var onsaleSwipers = new Swiper(".bestSellerSwiper", {
             loop: true, 
-            slidesPerView: 1.2,
+            slidesPerView: 1.15,
             spaceBetween:10,
             pagination: {
                 el: ".image-swiper-pagination",
@@ -517,8 +457,14 @@ $(".custom-dot").on("mouseenter", function () {
                 prevEl: ".bestSeller-prev"
             },
             breakpoints: {
-                1200: {
+                1400: {
                     slidesPerView: 4,
+                },
+                1300: {
+                    slidesPerView: 3.2,
+                },
+                1200: {
+                    slidesPerView: 3.2,
                 },
                 980: {
                     slidesPerView: 3
@@ -559,8 +505,11 @@ function modals() {
         $.fancybox.close(); // Fancybox modalni yopish
     });
 }
-
 modals();
 
+$('.content_btn').click(function() {    
+$(this).fadeOut();
+$('.content__item').fadeIn().css({'display': 'flex'});
+ })
 });
-console.warn = function() {};
+console.warn = function() {}

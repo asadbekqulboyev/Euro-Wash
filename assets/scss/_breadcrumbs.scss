@@ -1,0 +1,26 @@
+.breadcrumbs{
+    padding: 15px 0;
+    &__list{
+        display: flex;
+        align-items: center;
+        gap: 0 10px;
+    }
+    &__item{
+        font-size: 14px;
+        color: var(--main-color);
+        list-style: none;
+    }    
+    &__link{
+        text-decoration: none;
+        color: var(--main-color);
+        transition: all .2s linear;
+        &:hover{
+            color: var(--light-blue);
+        }
+        &-active{
+            color:var(--gray-color);
+            text-decoration: none;
+
+        }
+    }
+}

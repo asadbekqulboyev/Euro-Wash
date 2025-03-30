@@ -9,6 +9,10 @@
   src: url("/assets/fonts/PPNeueMontreal-Bold.woff2") format("woff2");
   font-weight: 700;
 }
+@font-face {
+  font-family: "PP Neue Montreal Medium";
+  src: url("/assets/fonts/PPNeueMontreal-Medium.woff2") format("woff2");
+}
 *, ul, ol, p {
   margin: 0;
   padding: 0;
@@ -2019,6 +2023,7 @@ form {
   display: flex;
   gap: 0 15px;
   margin-top: 15px;
+  justify-content: space-between;
 }
 .swiper.onsaleSwiper .swiper-slide .product-box__info--item,
 .swiper.bestSellerSwiper .swiper-slide .product-box__info--item {
@@ -2093,6 +2098,7 @@ form {
   display: flex;
   align-items: center;
   gap: 0 10px;
+  justify-content: space-between;
 }
 .swiper.onsaleSwiper .swiper-slide .product-box__buttons a,
 .swiper.bestSellerSwiper .swiper-slide .product-box__buttons a {
@@ -2196,6 +2202,7 @@ form {
   height: 100%;
   flex: 1;
   display: block;
+  cursor: pointer;
 }
 .swiper.onsaleSwiper .swiper-slide__image .image-swiper-pagination,
 .swiper.bestSellerSwiper .swiper-slide__image .image-swiper-pagination {
@@ -2856,6 +2863,204 @@ h2 {
   .brands__tabs--tab_contents .content__item--image img {
     object-fit: cover;
   }
+}
+
+.breadcrumbs {
+  padding: 15px 0;
+}
+.breadcrumbs__list {
+  display: flex;
+  align-items: center;
+  gap: 0 10px;
+}
+.breadcrumbs__item {
+  font-size: 14px;
+  color: var(--main-color);
+  list-style: none;
+}
+.breadcrumbs__link {
+  text-decoration: none;
+  color: var(--main-color);
+  transition: all 0.2s linear;
+}
+.breadcrumbs__link:hover {
+  color: var(--light-blue);
+}
+.breadcrumbs__link-active {
+  color: var(--gray-color);
+  text-decoration: none;
+}
+
+.brands_main .brands {
+  margin-top: 0;
+}
+.brands_main .brands .container {
+  padding: 0 15px;
+}
+.brands_main .brands .content {
+  display: flex;
+  opacity: 1;
+  position: static;
+  visibility: visible;
+  margin-top: 24px;
+}
+.brands_main .brands .content .content__item {
+  width: calc(50% - 12px);
+}
+@media (max-width: 980px) {
+  .brands_main .brands .content .content__item {
+    width: 100%;
+  }
+  .brands_main .brands .content .content__item:nth-child(n+5) {
+    display: none;
+  }
+}
+.brands_main .brands .content_btn {
+  cursor: pointer;
+  color: var(--main-color);
+  margin-top: 9px;
+  padding: 12px 24px;
+  border-radius: 10px;
+  background: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  display: none;
+}
+@media (max-width: 980px) {
+  .brands_main .brands .content_btn {
+    display: block;
+  }
+}
+.brands_main .bestSeller-prev {
+  top: 50%;
+  left: -54px;
+}
+@media (max-width: 1440px) {
+  .brands_main .bestSeller-prev {
+    left: 0;
+    z-index: 423;
+  }
+}
+.brands_main .bestSeller-next {
+  top: 50%;
+  right: -54px;
+}
+@media (max-width: 1440px) {
+  .brands_main .bestSeller-next {
+    right: 0;
+    z-index: 423;
+  }
+}
+
+.brands_page .brands {
+  margin-top: 0;
+}
+@media (max-width: 768px) {
+  .brands_page .brands .container {
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  .brands_page .brands {
+    padding: 0 15px;
+  }
+}
+.brands_page .brands .content__item--info {
+  padding: 50px 0px 50px 60px;
+}
+@media (max-width: 768px) {
+  .brands_page .brands .content__item--info {
+    padding: 20px 0 20px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .brands_page {
+    margin-top: 110px;
+  }
+}
+@media (max-width: 768px) {
+  .brands_page .breadcrumbs {
+    padding-top: 0;
+  }
+}
+.brands_page .catalog {
+  margin-top: 80px;
+}
+@media (max-width: 768px) {
+  .brands_page .catalog {
+    margin-top: 40px;
+  }
+}
+.brands_page .catalog__content {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 24px;
+  gap: 48px 0;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+@media (max-width: 980px) {
+  .brands_page .catalog__content {
+    gap: 32px 0;
+  }
+}
+@media (max-width: 768px) {
+  .brands_page .catalog__content {
+    margin-top: 10px;
+    gap: 20px 0;
+  }
+}
+.brands_page .catalog__content--item {
+  width: calc(16.66% - 12px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-direction: column;
+  color: #001B2B;
+  font-family: "PP Neue Montreal Medium";
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration: none;
+  transition: all 0.2s linear;
+}
+@media (max-width: 980px) {
+  .brands_page .catalog__content--item {
+    width: calc(33.3333% - 12px);
+  }
+}
+@media (max-width: 556px) {
+  .brands_page .catalog__content--item {
+    width: calc(50% - 5px);
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+.brands_page .catalog__content--item:hover {
+  color: #3CB2F2;
+}
+.brands_page .catalog__content--item--image {
+  object-fit: contain;
+  width: 100%;
+  border-radius: 20px;
+}
+.brands_page .catalog__content--item--text {
+  padding: 0 10px;
+}
+.brands_page .catalog__content--title {
+  font-size: var(--h2);
+  font-weight: 700;
+  color: var(--main-color);
+}
+.brands_page .catalog__item--title {
+  font-size: var(--h2);
+  font-weight: 700;
+  color: var(--main-color);
 }
 
 body.is-active {

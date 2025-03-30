@@ -6,6 +6,10 @@
 @import "benefits";
 @import "footer";
 @import "tabs";
+@import "breadcrumbs";
+// pgaes
+@import "brands";
+@import "catalog";
 body{
     &.is-active{
         overflow: hidden;
