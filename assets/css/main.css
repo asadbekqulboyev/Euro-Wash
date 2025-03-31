@@ -3620,6 +3620,15 @@ h2 {
   background: #F6F6F6;
   padding: 12px 24px;
   width: 100%;
+  outline: 0;
+  border: 0;
+}
+.order_form .form_left .form__left_items {
+  display: flex;
+  justify-content: space-between;
+}
+.order_form .form_left .form__left_item {
+  width: calc(33.33% - 10px);
 }
 
 body.is-active {
