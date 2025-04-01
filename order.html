@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <title>Euro-Wash</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/themes/base/jquery-ui.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1335,19 +1335,19 @@
         </header>
         <main class="main order">
             <!-- breadcrumbs -->
-            <section class="breadcrumbs">
+            <div class="breadcrumbs">
                 <div class="breadcrumbs__container container">
                     <ul class="breadcrumbs__list">
                         <li class="breadcrumbs__item">
                             <a class="breadcrumbs__link" href="">Главная</a>
                         </li>
-                        <img src="assets/images/breadcrumbs_icon.svg" alt="">
+                        <li><img src="assets/images/breadcrumbs_icon.svg" alt=""></li>
                         <li class="breadcrumbs__item">
                             <a class="breadcrumbs__link-active" href="">Оформление заказа</a>
                         </li>
                     </ul>
                 </div>
-            </section>
+            </div>
             <!-- order form -->
             <section class="order_form">
                 <div class="order_form__container container">
@@ -1500,11 +1500,11 @@
                                     </label>
                                     <label class="radio start">
                                         <input type="radio" name="delivery_to" value="delivery">
-                                        <div>
+                                        <span>
                                             <h5 class="radio__title">100% предоплата банковской картой</h5>
                                             <p>(Ссылку на страницу оплаты вы получите на электронную почту, после
                                                 оформления заказа)</p>
-                                        </div>
+                                        </span>
                                     </label>
                                     <label class="radio start">
                                         <input type="radio" name="delivery_to" value="delivery">
