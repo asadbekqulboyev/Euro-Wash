@@ -5,6 +5,11 @@
     }
     .order_form--title{
         padding-bottom: 24px;
+        @media (max-width:768px) {
+            width: 100%;
+            font-size: 24px;
+            padding-bottom: 20px;
+        }
     }
     .order_form__content--form {
         display: flex;
@@ -41,7 +46,7 @@
             @media (max-width:1300px) {
                padding: 20px;
             }
-            &_title {
+            .form__left-component_title_title {
                 font-size: 24px;
                 font-style: normal;
                 font-weight: 700;
@@ -310,6 +315,7 @@
                         font-size: 14px;
                         font-style: normal;
                         font-weight: 500;
+                        display: block;
                         @media (max-width:768px) {
                             font-size: 14px;
                         }

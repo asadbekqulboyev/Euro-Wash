@@ -3613,6 +3613,13 @@ h2 {
 .order_form .order_form--title {
   padding-bottom: 24px;
 }
+@media (max-width: 768px) {
+  .order_form .order_form--title {
+    width: 100%;
+    font-size: 24px;
+    padding-bottom: 20px;
+  }
+}
 .order_form .order_form__content--form {
   display: flex;
   justify-content: space-between;
@@ -3654,13 +3661,13 @@ h2 {
     padding: 20px;
   }
 }
-.order_form .form_left .form__left-component_title {
+.order_form .form_left .form__left-component .form__left-component_title_title {
   font-size: 24px;
   font-style: normal;
   font-weight: 700;
 }
 @media (max-width: 768px) {
-  .order_form .form_left .form__left-component_title {
+  .order_form .form_left .form__left-component .form__left-component_title_title {
     font-size: 20px;
   }
 }
@@ -3932,6 +3939,7 @@ h2 {
   font-size: 14px;
   font-style: normal;
   font-weight: 500;
+  display: block;
 }
 @media (max-width: 768px) {
   .order_form .form_left .form__left-component .radio.start .radio__description {
