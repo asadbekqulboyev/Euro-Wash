@@ -524,5 +524,25 @@ function dropdown() {
 
  }
  dropdown()
+ function CountProduct(){
+    $('.cart__btn--plus').click(function() {
+        let input = $(this).siblings('.cart__input');
+        let value = parseInt(input.val());
+        input.val(value + 1);
+      });
+    
+      $('.cart__btn--minus').click(function() {
+        let input = $(this).siblings('.cart__input');
+        let value = parseInt(input.val());
+        if (value > 1) {
+          input.val(value - 1);
+        }
+      });
+    
+      $('.cart__remove').click(function() {
+        $(this).closest('.cart__item').remove();
+      });
+ }
+ CountProduct()
 });
 console.warn = function() {}

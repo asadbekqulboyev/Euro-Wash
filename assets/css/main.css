@@ -3602,20 +3602,29 @@ h2 {
   cursor: pointer;
 }
 
-.order_form .form_left {
-  width: calc(100% - 336px);
+.order_form {
+  padding-bottom: 80px;
 }
-.order_form .form_left .form__left-component {
-  border-radius: 20px;
-  background: #FFF;
-  padding: 40px;
+@media (max-width: 768px) {
+  .order_form {
+    padding-bottom: 40px;
+  }
 }
-.order_form .form_left .form__left-component_title {
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 700;
+.order_form .order_form--title {
+  padding-bottom: 24px;
 }
-.order_form .form_left .form__left-component input {
+.order_form .order_form__content--form {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .order_form .order_form__content--form {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.order_form input:not([type=radio]) {
   border-radius: 10px;
   background: #F6F6F6;
   padding: 12px 24px;
@@ -3623,12 +3632,468 @@ h2 {
   outline: 0;
   border: 0;
 }
+.order_form .form_left {
+  width: calc(100% - 336px);
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+@media (max-width: 768px) {
+  .order_form .form_left {
+    width: 100%;
+    gap: 10px;
+  }
+}
+.order_form .form_left .form__left-component {
+  border-radius: 20px;
+  background: #FFF;
+  padding: 40px;
+}
+@media (max-width: 1300px) {
+  .order_form .form_left .form__left-component {
+    padding: 20px;
+  }
+}
+.order_form .form_left .form__left-component_title {
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form__left-component_title {
+    font-size: 20px;
+  }
+}
+.order_form .form_left .form__left-component .cart__header {
+  justify-content: space-between;
+  padding-bottom: 13px;
+}
+@media (max-width: 1130px) {
+  .order_form .form_left .form__left-component .cart__header {
+    display: none !important;
+  }
+}
+.order_form .form_left .form__left-component .cart__header .cart__column--quantity,
+.order_form .form_left .form__left-component .cart__header .cart__column--price,
+.order_form .form_left .form__left-component .cart__header .cart__column--total {
+  padding: 0;
+  background: transparent;
+  color: #78838A;
+  font-family: "PP Neue Montreal";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  text-align: left;
+}
+.order_form .form_left .form__left-component .cart__header .last {
+  flex: 0.1;
+}
+.order_form .form_left .form__left-component .cart__header,
+.order_form .form_left .form__left-component .cart__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #F6F6F6;
+  gap: 40px;
+}
+@media (max-width: 1300px) {
+  .order_form .form_left .form__left-component .cart__header,
+  .order_form .form_left .form__left-component .cart__item {
+    gap: 10px;
+  }
+}
+@media (max-width: 1130px) {
+  .order_form .form_left .form__left-component .cart__header,
+  .order_form .form_left .form__left-component .cart__item {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form__left-component .cart__header,
+  .order_form .form_left .form__left-component .cart__item {
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+}
+.order_form .form_left .form__left-component .cart__header:last-child,
+.order_form .form_left .form__left-component .cart__item:last-child {
+  border-bottom: 0;
+}
+.order_form .form_left .form__left-component .cart__header .cart__name,
+.order_form .form_left .form__left-component .cart__item .cart__name {
+  color: #001B2B;
+  font-family: Inter;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form__left-component .cart__header .cart__name,
+  .order_form .form_left .form__left-component .cart__item .cart__name {
+    font-size: 12px;
+  }
+}
+.order_form .form_left .form__left-component .cart__column {
+  flex: 1;
+  text-align: center;
+  display: flex;
+}
+@media (max-width: 1130px) {
+  .order_form .form_left .form__left-component .cart__column {
+    width: fit-content;
+    flex: 0 0 auto;
+  }
+}
+.order_form .form_left .form__left-component .cart__column--product {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #78838A;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  flex: 2;
+}
+@media (max-width: 1130px) {
+  .order_form .form_left .form__left-component .cart__column--product {
+    width: 60%;
+  }
+}
+.order_form .form_left .form__left-component .card_price {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.order_form .form_left .form__left-component .cart__column--price {
+  flex-direction: column;
+}
+.order_form .form_left .form__left-component .cart__image {
+  width: 80px;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form__left-component .cart__image {
+    width: 40%;
+  }
+}
+.order_form .form_left .form__left-component .cart__price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #78838A;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+}
+.order_form .form_left .form__left-component .cart__old-price {
+  text-decoration: line-through;
+  color: #F26C6C;
+  text-align: center;
+  font-family: "PP Neue Montreal";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form__left-component .cart__old-price {
+    font-size: 12px;
+  }
+}
+.order_form .form_left .form__left-component .cart__discount {
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  color: #FFF;
+  text-align: center;
+  border-radius: 100px;
+  background: #F26C6C;
+  padding: 3px 5px;
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form__left-component .cart__discount {
+    font-weight: 400;
+    font-size: 10px;
+  }
+}
+.order_form .form_left .form__left-component .cart__new-price {
+  color: #000;
+  text-align: left;
+  font-family: "PP Neue Montreal";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form__left-component .cart__new-price {
+    font-size: 16px;
+  }
+}
+.order_form .form_left .form__left-component .cart__quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.order_form .form_left .form__left-component .cart__column--quantity {
+  background: #F6F6F6;
+  border-radius: 10px;
+  align-items: center;
+  padding: 12px 24px;
+  justify-content: space-between;
+}
+.order_form .form_left .form__left-component .cart__btn {
+  outline: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.order_form .form_left .form__left-component input.cart__input {
+  width: 40px;
+  display: block;
+  text-align: center;
+  margin: 0 5px;
+  padding: 0;
+  color: var(--001-b-2-b, #001B2B);
+  font-family: "PP Neue Montreal";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+}
+.order_form .form_left .form__left-component .cart__total {
+  font-weight: bold;
+}
+.order_form .form_left .form__left-component .cart__remove {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: red;
+  cursor: pointer;
+  width: fit-content;
+}
+.order_form .form_left .form__left-component .cart__column--total {
+  color: #000;
+  text-align: center;
+  font-family: "PP Neue Montreal";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+}
+.order_form .form_left .form__left-component .cart__column--total p {
+  display: none;
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form__left-component .cart__column--total p {
+    display: block;
+    color: #78838A;
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form__left-component .cart__column--total {
+    font-size: 16px;
+  }
+}
+.order_form .form_left .form__left-component .radio {
+  width: 100%;
+  color: var(--main-color);
+  font-family: "PP Neue Montreal";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form__left-component .radio {
+    font-size: 14px;
+  }
+}
+.order_form .form_left .form__left-component .radio.start {
+  align-items: flex-start;
+}
+.order_form .form_left .form__left-component .radio.start p {
+  color: #78838A;
+  font-family: "PP Neue Montreal";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form__left-component .radio.start p {
+    font-size: 14px;
+  }
+}
+.order_form .form_left .form__left-component .radio .radio__title {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form__left-component .radio .radio__title {
+    font-size: 14px;
+  }
+}
 .order_form .form_left .form__left_items {
   display: flex;
   justify-content: space-between;
+  margin-top: 20px;
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form__left_items {
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-direction: column;
+  }
 }
 .order_form .form_left .form__left_item {
   width: calc(33.33% - 10px);
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form__left_item {
+    width: 100%;
+  }
+}
+.order_form .form_left .form__left_item.input_50 {
+  width: calc(50% - 10px);
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form__left_item.input_50 {
+    width: 100%;
+  }
+}
+.order_form .form_right {
+  position: sticky;
+  top: 140px;
+  height: fit-content;
+  border-radius: 20px;
+  background: #FFF;
+  flex: 1;
+}
+.order_form .form_right .form_right-title {
+  color: var(--main-color);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 20px 20px 0;
+}
+.order_form .form_right .form_right_item {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+  padding: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #F6F6F6;
+}
+.order_form .form_right .product__right_price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px 20px;
+  border-bottom: 1px solid #F6F6F6;
+}
+.order_form .form_right .product__right_price .product__right_price-text {
+  color: #78838A;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+}
+.order_form .form_right .product__right_price .product__right_price-sum {
+  color: #000;
+  text-align: center;
+  font-family: "PP Neue Montreal";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+}
+.order_form .form_right .bonus {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--main-color);
+  padding: 20px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  justify-content: space-between;
+  border-bottom: 1px solid #F6F6F6;
+}
+.order_form .form_right .bonus .banus_left {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.order_form .form_right .bonus .bonus__amount {
+  display: flex;
+  align-items: center;
+  border-radius: 100px;
+  background: #F6F6F6;
+  padding: 3px 5px;
+  gap: 2px;
+}
+.order_form .form_right .bonus .bonus__toggle {
+  display: none;
+}
+.order_form .form_right .bonus .bonus__slider {
+  width: 48px;
+  height: 28px;
+  background: #ddd;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 100px;
+}
+.order_form .form_right .bonus .bonus__slider::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  transition: 0.3s;
+}
+.order_form .form_right .bonus .bonus__toggle:checked + .bonus__slider {
+  background: #3CB2F2;
+}
+.order_form .form_right .bonus .bonus__toggle:checked + .bonus__slider::before {
+  left: 24px;
+}
+.order_form .form_right .form_right_bottom {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  gap: 20px;
+}
+.order_form .form_right .form_right_bottom .form_description {
+  color: #78838A;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+.order_form .form_right .form_right_bottom .form_description a {
+  color: inherit;
 }
 
 body.is-active {
