@@ -3926,7 +3926,7 @@ h2 {
 .order_form .form_left .form__left-component .radio.start {
   align-items: flex-start;
 }
-.order_form .form_left .form__left-component .radio.start p {
+.order_form .form_left .form__left-component .radio.start .radio__description {
   color: #78838A;
   font-family: "PP Neue Montreal";
   font-size: 14px;
@@ -3934,7 +3934,7 @@ h2 {
   font-weight: 500;
 }
 @media (max-width: 768px) {
-  .order_form .form_left .form__left-component .radio.start p {
+  .order_form .form_left .form__left-component .radio.start .radio__description {
     font-size: 14px;
   }
 }
