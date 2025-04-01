@@ -114,7 +114,8 @@
                     width: 100%;
                     overflow: hidden;
                     min-height: 312px;
-
+                    text-decoration: none;
+                    color: var(--main-color);
                     @media (max-width: 980px){
                         height: 250px;
                     }

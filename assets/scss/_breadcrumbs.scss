@@ -1,5 +1,8 @@
 .breadcrumbs{
     padding: 15px 0;
+    .container{
+        padding: 0 15px;
+    }
     &__list{
         display: flex;
         align-items: center;
