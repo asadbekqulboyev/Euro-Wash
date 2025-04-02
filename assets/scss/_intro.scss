@@ -1,0 +1,164 @@
+.product__intro {
+    &_top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &_bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 24px 0;
+        flex-wrap: wrap;
+        gap: 20px 0;
+        &_list {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            list-style: none;
+            flex-wrap: wrap;
+            li {
+                display: flex;
+                align-items: center;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                gap: 4px;
+                flex: 0 0 auto;
+                .discount {
+                    padding: 3px 5px;
+                    background: #F26C6C;
+                    border-radius: 100px;
+                    color: #fff;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                }
+
+                .raiting {
+                    display: flex;
+                    align-items: center;
+                    gap: 4px;
+                }
+            }
+        }
+
+        .product_bottom_links {
+            display: flex;
+            gap: 20px;
+
+            a {
+                text-decoration: none;
+                color: var(--main-color);
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                transition: all .2s linear;
+
+                path {
+                    transition: all .2s linear;
+                }
+
+                &:hover {
+                    path {
+                        stroke: var(--light-blue);
+                    }
+
+                    color: var(--light-blue);
+                }
+            }
+        }
+    }
+
+    .product__intro_slider {
+        display: flex;
+        max-width: calc(41.5% - 12px);
+        justify-content: space-between;
+        gap: 10px;
+        @media (max-width:980px) {
+            flex-direction: column-reverse;
+        }
+        .slider__thumbnails {
+            height: 100%;
+            max-height: 448px;
+            margin: 0;
+            flex: 0 0 auto;
+            @media (max-width:980px) {
+                max-height: auto;
+            }
+            .slider__thumb {
+                width: 78px;
+                height: 78px !important;
+                border-radius: 10px;
+                border: 2px solid transparent;
+                background: #FFF;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 12px;
+                cursor: pointer;
+                &.swiper-slide-thumb-active{
+                    border-color: #3CB2F2;
+                 }
+                img{
+                    width: 100%;
+                    object-fit: contain;
+                }
+            }
+        }
+
+        .slide_display {
+            border-radius: 20px;
+            background: #FFF;
+            width: 100%;
+            max-width: 448px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 448px;
+            user-select: none;
+            @media (max-width:980px) {
+                height: 300px;
+            }
+            .slide_buttons{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 100%;
+                padding: 0 10px;
+                .button_slider{
+                    cursor: pointer;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    width: 44px;
+                    height: 44px;
+                    border-radius: 10px;
+                    background: #F6F6F6;
+                    position: relative;
+                    z-index: 22;
+                    transition: all .2s linear;
+                    &:hover{
+                        background: var(--light-blue);
+                        path{
+                            stroke:#fff;
+                        }
+                    }
+                }
+            }
+            .slider__item {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .slider__image{
+                width: 338px;
+            }
+        }
+    }
+}

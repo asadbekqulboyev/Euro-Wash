@@ -544,5 +544,57 @@ function dropdown() {
       });
  }
  CountProduct()
+function commentTab() {
+    $('.product__tabs__content__products__item').hide();
+    $('#product_tab1').show();
+    
+    $('.product__tabs__content__links__item a').on('click', function (e) {
+        e.preventDefault();
+        let target = $(this).attr('href');
+        
+        if (!$(this).hasClass('active')) {
+            $('.product__tabs__content__links__item a').removeClass('active');
+            $(this).addClass('active');
+            
+            $('.product__tabs__content__products__item:visible').stop(true, true).fadeOut(200, function () {
+                $(target).stop(true, true).fadeIn(200);
+            });
+        }
+    });
+}
+ commentTab()
+function thumbSliders (){
+    var thumbsSlider = new Swiper(".thumbs-slider", {
+        spaceBetween: 8,
+        slidesPerView: 5,
+        // Thumbnaillarni vertikal qilish
+        freeMode: true,
+        watchSlidesProgress: true,
+        breakpoints:{
+            0:{
+                slidesPerView: 4.2,
+                direction: "horizontal",
+            },
+            980:{
+                slidesPerView:5,
+                direction: "vertical",
+            }
+
+        }
+    });
+
+    var mainSlider = new Swiper(".main-slider", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+            nextEl: ".button_slider.next",
+            prevEl: ".button_slider.prev",
+        },
+        thumbs: {
+            swiper: thumbsSlider,
+        },
+    });
+}
+thumbSliders()
 });
 console.warn = function() {}
