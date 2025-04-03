@@ -596,5 +596,27 @@ function thumbSliders (){
     });
 }
 thumbSliders()
+// product radio color size ...
+function Radios (){
+    new Swiper('.swiper-color', {
+        slidesPerView: 3.5,
+        spaceBetween: 17,
+        navigation: true,
+    });
+
+    new Swiper('.swiper-bowl', {
+        slidesPerView: 3.3,
+        spaceBetween: 17,
+        navigation: true,
+    });
+
+    // Input radio bosilganda active qilish
+    $('.swiper-slide input[type="radio"]').change(function () {
+        let name = $(this).attr('name'); // Qaysi radio guruhi ekanini olish
+        $(`input[name="${name}"]`).parent().removeClass('active'); // Boshqa elementlardan active olib tashlash
+        $(this).parent().addClass('active'); // Tanlangan elementga active qo'shish
+    });
+}
+Radios()
 });
 console.warn = function() {}
