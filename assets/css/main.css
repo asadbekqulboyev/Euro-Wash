@@ -3597,6 +3597,47 @@ h2 {
   display: block;
   margin-bottom: 4px;
 }
+.product__tabs .container .product__tabs__content .product__tabs__content__products .review_btnlists {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.product__tabs .container .product__tabs__content .product__tabs__content__products .review_btnlists .review__btn {
+  background: #F6F6F6;
+  padding: 12px 24px;
+  color: var(--main-color);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  text-decoration: none;
+  justify-content: center;
+  flex: 1;
+  text-align: center;
+}
+.product__tabs .container .product__tabs__content .product__tabs__content__products .review_btnlists .review__btn:nth-child(2) {
+  flex: 2;
+}
+.product__tabs .container .product__tabs__content .product__tabs__content__products .review_btnlists .review__btn:nth-child(3) {
+  color: #78838A;
+}
+.product__tabs .container .product__tabs__content .product__tabs__content__products .review_btnlists .review__btn span {
+  color: #78838A;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-align: left;
+}
+.product__tabs .container .product__tabs__content .product__tabs__content__products .review_btnlists .review__btn p {
+  text-align: left;
+}
 
 .breadcrumbs {
   padding: 15px 0;
