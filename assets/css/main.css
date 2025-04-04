@@ -5099,7 +5099,7 @@ h2 {
   flex-direction: column;
   justify-content: center;
 }
-.variants .swiper-slide .slide_item_info p {
+.variants .swiper-slide .slide_item_info span:first-child {
   font-size: 14px;
   width: 100%;
   overflow: hidden;
@@ -5108,7 +5108,7 @@ h2 {
   text-align: center;
 }
 @media (max-width: 768px) {
-  .variants .swiper-slide .slide_item_info p {
+  .variants .swiper-slide .slide_item_info span:first-child {
     font-size: 12px;
   }
 }

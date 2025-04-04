@@ -72,8 +72,7 @@
             align-items: center;
             flex-direction: column;
             justify-content: center;
-
-            p {
+            span:first-child {
                 font-size: 14px;
                 width: 100%;
                 overflow: hidden;
