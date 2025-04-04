@@ -979,6 +979,10 @@ body {
   display: block;
 }
 
+body.is-active .header {
+  z-index: 10000;
+}
+
 .header__modal-overlay {
   position: fixed;
   top: 0;
