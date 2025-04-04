@@ -4,27 +4,33 @@
     font-family: 'PP Neue Montreal';
     src: url('/assets/fonts/PPNeueMontreal-Medium.woff2') format('woff2');
 }
+
 @font-face {
     font-family: 'PP Neue Montreal';
     src: url('/assets/fonts/PPNeueMontreal-Bold.woff2') format('woff2');
     font-weight: 700;
 }
+
 @font-face {
     font-family: 'PP Neue Montreal Medium';
     src: url('/assets/fonts/PPNeueMontreal-Medium.woff2') format('woff2');
 }
 
-*, ul, ol, p{
+*,
+ul,
+ol,
+p {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-:root{
+
+:root {
     --main-color: #001B2B;
     --secondary-color: #202F38;
     --font: "PP Neue Montreal";
     --thin: 300;
-    --bold:700;
+    --bold: 700;
     --medium: 500;
     --semi-bold: 600;
     --gray-color: #78838A;
@@ -38,6 +44,7 @@
     --light-blue: #3CB2F2;
 
 }
+
 body {
     font-family: 'PP Neue Montreal';
     font-size: 16px;
@@ -45,19 +52,23 @@ body {
     line-height: normal;
     color: var(--main-color);
     background-color: #f6f6f6;
-    @media (max-width:768px){
-    font-size: 14px;
+
+    @media (max-width:768px) {
+        font-size: 14px;
     }
 }
+
 .container {
     max-width: 1320px;
     width: 100%;
     margin: 0 auto;
-    @media (max-width:1440px){
+
+    @media (max-width:1440px) {
         padding: 0 15px;
     }
 }
-.button{
+
+.button {
     padding: 12px 24px;
     border-radius: 10px;
     text-align: center;
@@ -69,59 +80,109 @@ body {
     border: none;
     display: inline-block;
 
-    &.blue{
+    &.blue {
         background-color: var(--light-blue);
         color: var(--white);
 
-        &:hover{
+        &:hover {
             background-color: #1596DA;
         }
-        &:active{
+
+        &:active {
             background-color: #3CB2F2;
             opacity: 0.5;
         }
     }
 
-    &.black{
+    &.black {
         background-color: #001B2B;
         color: var(--white);
         display: inline-block;
 
-        &:hover{
+        &:hover {
             opacity: 0.5;
         }
     }
-    &.white{
+
+    &.white {
         background-color: var(--white);
         color: #202F38;
         display: inline-block;
 
-        &:active{
+        &:active {
             opacity: 0.5;
         }
     }
 }
-.slide_btn{
+
+.slide_btn {
     width: 44px;
     height: 44px;
     border-radius: 10px;
     background: #F6F6F6;
     display: flex;
     justify-content: center;
-    align-items:center;
+    align-items: center;
     cursor: pointer;
     flex: 0 0 auto;
     transition: all .2s linear;
+
     svg path {
         transition: all .2s linear;
     }
-    &:hover{
+
+    &:hover {
         background: var(--light-blue);
+
         svg path {
             stroke: var(--white);
         }
     }
-    &.next{
+
+    &.next {
         transform: rotate(180deg);
+    }
+}
+
+.custom_checkbox {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+
+    input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        width: 0;
+        height: 0;
+    }
+
+    .checkmark {
+        width: 20px;
+        height: 20px;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease-in-out;
+        border-radius: 5px;
+        border: 1px solid #3CB2F2;
+    }
+
+    input:checked+.checkmark {
+        background-color: #3CB2F2;
+        border: none;
+        position: relative;
+    }
+
+    input:checked+.checkmark::after {
+        content: "";
+        position: absolute;
+        width: 9px;
+        height: 5px;
+        top: 4.5px;
+        border: solid #fff;
+        border-width: 0 0 2px 2px;
+        transform: rotate(-45deg);
     }
 }

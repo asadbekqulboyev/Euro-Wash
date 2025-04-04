@@ -575,7 +575,7 @@ function thumbSliders (){
                 slidesPerView: 4.2,
                 direction: "horizontal",
             },
-            980:{
+            769:{
                 slidesPerView:5,
                 direction: "vertical",
             }
@@ -599,17 +599,31 @@ thumbSliders()
 // product radio color size ...
 function Radios (){
     new Swiper('.swiper-color', {
-        slidesPerView: 3.5,
+        slidesPerView: 3.4,
         spaceBetween: 17,
-        navigation: true,
+        navigation:{
+            nextEl:'.color .slide_btn.next',
+            prevEl:'.color .slide_btn.prev'
+        }
     });
 
     new Swiper('.swiper-bowl', {
-        slidesPerView: 3.3,
+        slidesPerView: 3.4,
         spaceBetween: 17,
-        navigation: true,
+        navigation:{
+            nextEl:'.bowl .slide_btn.next',
+            prevEl:'.bowl .slide_btn.prev'
+        }
     });
 
+    new Swiper('.swiper-btn', {
+        slidesPerView: 2.6,
+        spaceBetween: 17,
+        navigation:{
+            nextEl:'.btn .slide_btn.next',
+            prevEl:'.btn .slide_btn.prev'
+        }
+    });
     // Input radio bosilganda active qilish
     $('.swiper-slide input[type="radio"]').change(function () {
         let name = $(this).attr('name'); // Qaysi radio guruhi ekanini olish

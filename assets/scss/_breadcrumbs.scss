@@ -6,12 +6,14 @@
     &__list{
         display: flex;
         align-items: center;
-        gap: 0 10px;
+        gap: 10px;
+        flex-wrap: wrap;
     }
     &__item{
         font-size: 14px;
         color: var(--main-color);
         list-style: none;
+        
     }    
     &__link{
         text-decoration: none;
