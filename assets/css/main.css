@@ -3325,6 +3325,7 @@ h2 {
 }
 .product__tabs .container .product__tabs__content .product__tabs__content__products {
   padding: 40px;
+  width: 100%;
 }
 @media (max-width: 980px) {
   .product__tabs .container .product__tabs__content .product__tabs__content__products {
@@ -4532,6 +4533,12 @@ h2 {
   position: relative;
   cursor: pointer;
 }
+@media (max-width: 487px) {
+  .product__intro .tiltop.tiltop2 .tiltop_component {
+    left: auto;
+    right: -312px;
+  }
+}
 .product__intro .tiltop .tiltop_component {
   padding: 20px;
   border-radius: 10px;
@@ -4545,6 +4552,11 @@ h2 {
   opacity: 0;
   left: 50%;
   transition: all 0.3s linear;
+}
+@media (max-width: 556px) {
+  .product__intro .tiltop .tiltop_component {
+    left: -5%;
+  }
 }
 .product__intro .tiltop .tiltop_component .tiltop_title {
   font-size: 17px;

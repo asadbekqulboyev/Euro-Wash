@@ -21,6 +21,15 @@
     .tiltop {
         position: relative;
         cursor: pointer;
+        &.tiltop2{
+            .tiltop_component{
+                @media (max-width:487px) {
+                    left: auto;
+                    right: -312px;
+                }
+
+            }
+        }
         .tiltop_component {
             padding: 20px;
             border-radius: 10px;
@@ -34,6 +43,9 @@
             opacity: 0;
             left: 50%;
             transition: all .3s linear; 
+            @media (max-width:556px) {
+                left: -5%;
+            }
             .tiltop_title {
                 font-size: 17px;
                 font-style: normal;

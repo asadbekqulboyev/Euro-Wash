@@ -444,38 +444,89 @@ $(".custom-dot").on("mouseenter", function () {
 });
 
     
-    var onsaleSwipers = new Swiper(".bestSellerSwiper", {
-            loop: true, 
-            slidesPerView: 1.15,
-            spaceBetween:10,
-            pagination: {
-                el: ".image-swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".bestSeller-next",
-                prevEl: ".bestSeller-prev"
-            },
-            breakpoints: {
-                1400: {
-                    slidesPerView: 4,
+    // var onsaleSwipers = new Swiper(".bestSellerSwiper", {
+    //         loop: true, 
+    //         slidesPerView: 1.15,
+    //         spaceBetween:10,
+    //         pagination: {
+    //             el: "",
+    //             clickable: true,
+    //         },
+    //         navigation: {
+    //             nextEl: ".bestSeller-next",
+    //             prevEl: ".bestSeller-prev"
+    //         },
+    //         breakpoints: {
+    //             1400: {
+    //                 slidesPerView: 4,
+    //             },
+    //             1300: {
+    //                 slidesPerView: 3.2,
+    //             },
+    //             1200: {
+    //                 slidesPerView: 3.2,
+    //             },
+    //             980: {
+    //                 slidesPerView: 3
+    //             },
+    //             768:{
+    //                 slidesPerView: 2,
+    //                 spaceBetween:24,
+    //             },
+    //         },
+    //         nested: true,
+    // });
+    // $(".bestSellerSwiper").each(function(index) {
+    //     var $this = $(this); // Joriy slider
+    //     var onsaleSwipers = new Swiper(this, {
+    //         loop: true,
+    //         slidesPerView: 1.15,
+    //         spaceBetween: 10,
+    //         pagination: {
+    //             el: $this.find(".image-swiper-pagination"), // Tegishli pagination
+    //             clickable: true,
+    //         },
+    //         navigation: {
+    //             nextEl: $this.find(".bestSeller-next"), // Faqat shu slider uchun Next tugma
+    //             prevEl: $this.find(".bestSeller-prev")  // Faqat shu slider uchun Prev tugma
+    //         },
+    //         breakpoints: {
+    //             1400: { slidesPerView: 4 },
+    //             1300: { slidesPerView: 3.2 },
+    //             1200: { slidesPerView: 3.2 },
+    //             980: { slidesPerView: 3 },
+    //             768: { slidesPerView: 2, spaceBetween: 24 }
+    //         },
+    //         nested: true,
+    //     });
+    // });
+    $(document).ready(function () {
+        $(".bestSellerSwiper").each(function (index) {
+            var $this = $(this); // Joriy slider
+            var swiper = new Swiper(this, {
+                loop: true,
+                slidesPerView: 1.15,
+                spaceBetween: 10,
+                pagination: {
+                    el: $this.siblings(".image-swiper-pagination").get(0), // Paginationni o‘z slideriga bog‘lash
+                    clickable: true,
                 },
-                1300: {
-                    slidesPerView: 3.2,
+                navigation: {
+                    nextEl: $this.siblings(".bestSeller-next").get(0), // Faqat shu slider uchun Next
+                    prevEl: $this.siblings(".bestSeller-prev").get(0)  // Faqat shu slider uchun Prev
                 },
-                1200: {
-                    slidesPerView: 3.2,
+                breakpoints: {
+                    1400: { slidesPerView: 4 },
+                    1300: { slidesPerView: 3.2 },
+                    1200: { slidesPerView: 3.2 },
+                    980: { slidesPerView: 3 },
+                    768: { slidesPerView: 2, spaceBetween: 24 }
                 },
-                980: {
-                    slidesPerView: 3
-                },
-                768:{
-                    slidesPerView: 2,
-                    spaceBetween:24,
-                },
-            },
-            nested: true,
+                nested: true,
+            });
+        });
     });
+    
     $(".swiper-slide__saving").click(function(event) {
             event.preventDefault()
             $(this).find(".basket-icon").toggle();
