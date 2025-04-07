@@ -1,0 +1,58 @@
+.comparison-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+  &__remove-all {
+    background: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+}
+.comparison-list {
+  display: flex;
+  gap: 10px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow-x: auto;
+  &__button {
+    display: inline-flex;
+    align-items: center;
+    padding: 12px 24px;
+    border-radius: 10px;
+    background: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    color: var(--main-color);
+    transition: background-color 0.3s ease;
+    flex: 0 0 auto;
+
+    &--active {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+
+  &__count {
+    background-color: red;
+    color: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    border-radius: 50%;
+    padding: 1px 4px;
+    margin-left: 6px;
+    line-height: 1.25;
+    min-width: 16px;
+    height: 16px;
+    display: block;
+    text-align: center;
+  }
+}

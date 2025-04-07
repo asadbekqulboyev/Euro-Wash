@@ -345,10 +345,7 @@ function brands() {
         }
     });
 }
-
 brands();
-
-
 function sliders() {
     var swiper = new Swiper(".mainSwiper", {
             loop: true, 
@@ -442,70 +439,12 @@ $(".custom-dot").on("mouseenter", function () {
     $(this).siblings().removeClass("active");
     $(this).addClass("active");
 });
-
-    
-    // var onsaleSwipers = new Swiper(".bestSellerSwiper", {
-    //         loop: true, 
-    //         slidesPerView: 1.15,
-    //         spaceBetween:10,
-    //         pagination: {
-    //             el: "",
-    //             clickable: true,
-    //         },
-    //         navigation: {
-    //             nextEl: ".bestSeller-next",
-    //             prevEl: ".bestSeller-prev"
-    //         },
-    //         breakpoints: {
-    //             1400: {
-    //                 slidesPerView: 4,
-    //             },
-    //             1300: {
-    //                 slidesPerView: 3.2,
-    //             },
-    //             1200: {
-    //                 slidesPerView: 3.2,
-    //             },
-    //             980: {
-    //                 slidesPerView: 3
-    //             },
-    //             768:{
-    //                 slidesPerView: 2,
-    //                 spaceBetween:24,
-    //             },
-    //         },
-    //         nested: true,
-    // });
-    // $(".bestSellerSwiper").each(function(index) {
-    //     var $this = $(this); // Joriy slider
-    //     var onsaleSwipers = new Swiper(this, {
-    //         loop: true,
-    //         slidesPerView: 1.15,
-    //         spaceBetween: 10,
-    //         pagination: {
-    //             el: $this.find(".image-swiper-pagination"), // Tegishli pagination
-    //             clickable: true,
-    //         },
-    //         navigation: {
-    //             nextEl: $this.find(".bestSeller-next"), // Faqat shu slider uchun Next tugma
-    //             prevEl: $this.find(".bestSeller-prev")  // Faqat shu slider uchun Prev tugma
-    //         },
-    //         breakpoints: {
-    //             1400: { slidesPerView: 4 },
-    //             1300: { slidesPerView: 3.2 },
-    //             1200: { slidesPerView: 3.2 },
-    //             980: { slidesPerView: 3 },
-    //             768: { slidesPerView: 2, spaceBetween: 24 }
-    //         },
-    //         nested: true,
-    //     });
-    // });
-    $(document).ready(function () {
+$(document).ready(function () {
         $(".bestSellerSwiper").each(function (index) {
             var $this = $(this); // Joriy slider
             var swiper = new Swiper(this, {
                 loop: true,
-                slidesPerView: 1.15,
+                slidesPerView: 1.12,
                 spaceBetween: 10,
                 pagination: {
                     el: $this.siblings(".image-swiper-pagination").get(0), // Paginationni o‘z slideriga bog‘lash
@@ -561,7 +500,7 @@ modals();
 $('.content_btn').click(function() {    
 $(this).fadeOut();
 $('.content__item').fadeIn().css({'display': 'flex'});
- })
+})
 
 function dropdown() {
     $(".favorites_btn").click(function(){
@@ -683,5 +622,14 @@ function Radios (){
     });
 }
 Radios()
+$('.comparison__item-header').click(function() {    
+    $(this).toggleClass('is-active');
+    if ($(this).hasClass('is-active')) {
+        $(this).next().slideDown();
+    } else {
+        $(this).next().slideUp();
+    }
+});
+
 });
 console.warn = function() {}
