@@ -5279,6 +5279,11 @@ h2 {
   margin-top: 24px;
 }
 @media (max-width: 768px) {
+  .comparison {
+    margin-top: 10px;
+  }
+}
+@media (max-width: 768px) {
   .comparison .container {
     padding: 0 0 0 0;
   }
@@ -5295,6 +5300,11 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+@media (max-width: 768px) {
+  .comparison__items {
+    gap: 10px;
+  }
 }
 .comparison__item {
   display: flex;
