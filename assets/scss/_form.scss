@@ -496,3 +496,38 @@
 
     }
 }
+.bonus__toggle {
+    display: none;
+}
+
+.bonus__slider {
+    width: 48px;
+    height: 28px;
+    background: #ddd;
+    border-radius: 12px;
+    position: relative;
+    cursor: pointer;
+    border-radius: 100px;
+}
+
+.bonus__slider::before {
+    content: "";
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    top: 50%;
+    left: 4px;
+    transform: translateY(-50%);
+    transition: 0.3s;
+}
+
+.bonus__toggle:checked+.bonus__slider {
+    background: #3CB2F2;
+
+}
+
+.bonus__toggle:checked+.bonus__slider::before {
+    left: 24px;
+}

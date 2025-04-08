@@ -630,6 +630,48 @@ $('.comparison__item-header').click(function() {
         $(this).next().slideUp();
     }
 });
-
+function initRangeSlider(sliderId, inputMinId, inputMaxId, minValue, maxValue, startMin, startMax) {
+    const slider = document.getElementById(sliderId);
+    const inputMin = document.getElementById(inputMinId);
+    const inputMax = document.getElementById(inputMaxId);
+  
+    if (!slider || !inputMin || !inputMax) return;
+  
+    noUiSlider.create(slider, {
+      start: [startMin, startMax],
+      connect: true,
+      range: {
+        min: minValue,
+        max: maxValue
+      },
+      format: {
+        to: value => Math.round(value),
+        from: value => Number(value)
+      }
+    });
+  
+    slider.noUiSlider.on('update', (values, handle) => {
+      if (handle === 0) {
+        inputMin.value = values[0];
+      } else {
+        inputMax.value = values[1];
+      }
+    });
+  
+    inputMin.addEventListener('change', () => {
+      slider.noUiSlider.set([inputMin.value, null]);
+    });
+  
+    inputMax.addEventListener('change', () => {
+      slider.noUiSlider.set([null, inputMax.value]);
+    });
+  }
+  
+  // 👇 Foydalanish:
+  initRangeSlider('slider', 'input-min', 'input-max', 10000, 1100000, 10560, 1056000);
+  $('.favorites__shop_item-header').on('click', function() {
+    $(this).toggleClass('is-active');
+    $(this).next('.favorites__shop_content').slideToggle();
+  });
 });
 console.warn = function() {}
