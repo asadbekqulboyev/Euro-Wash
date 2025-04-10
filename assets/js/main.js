@@ -410,25 +410,22 @@ $(document).ready(function () {
     });
   }
   modals();
-  function setupMobileOnlyFancybox() {
-    if ($(window).width() <= 980) {
-      $('.favorites__shop_filterlists').fancybox({
-        buttons: ["close"]
-      });
-    } else {
-      // Katta ekranlarda bu elementlar fancybox ochmaydi
-      $('.favorites__shop_filterlists').off('click.fancybox').on('click.fancybox', function (e) {
-        e.preventDefault();
-      });
-    }
-  }
-
-  setupMobileOnlyFancybox();
-
-  // Ekran o'zgarganda ham tekshirish
-  $(window).resize(function () {
-    setupMobileOnlyFancybox();
+  $(".filter_open").click(function (e) {
+    e.preventDefault();
+    $('#filter').fadeIn();
+    $('body').addClass('is-active');
   });
+  $('.filter_mobile_close').click(function (e) {
+    e.preventDefault();
+    $('#filter').fadeOut();
+    $('body').removeClass('is-active');
+  });
+  $("#filter").click(function(e){
+    if(e.target.id == "filter"){
+      $(this).fadeOut();
+      $('body').removeClass('is-active');
+    }
+  })
 
   $(".content_btn").click(function () {
     $(this).fadeOut();

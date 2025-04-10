@@ -20,6 +20,9 @@
   margin: 0;
   list-style: none;
   overflow-x: auto;
+  &::-webkit-scrollbar {
+    display: none;
+  }
   &__button {
     display: inline-flex;
     align-items: center;

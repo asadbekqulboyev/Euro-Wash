@@ -1349,7 +1349,7 @@
         </div>
 
       </header>
-      <main class="main favorites_main">
+      <main class="main favorites_main cards_main">
         <!-- breadcrumbs -->
         <div class="breadcrumbs">
           <div class="breadcrumbs__container container">
@@ -1375,164 +1375,79 @@
               </div>
               <div class="favorites">
                 <div class="favorites__shop">
-                  <form class="favorites__shop_filterlists" id="filter" >
-                    <div class="favorites__shop-item">
-                      <h3 class="favorites__shop-title">Категории</h3>
-                      <ul class="favorites__shop-list">
-                        <li class="favorites__shop--item">
-                          <a class="favorites__shop-link" href=""
-                            >Встраиваемые вытяжки</a
-                          >
-                        </li>
-                        <li class="favorites__shop--item">
-                          <a class="favorites__shop-link" href=""
-                            >Встраиваемые вытяжки</a
-                          >
-                        </li>
-                        <li class="favorites__shop--item">
-                          <a class="favorites__shop-link" href=""
-                            >Встраиваемые вытяжки</a
-                          >
-                        </li>
-                        <li class="favorites__shop--item">
-                          <a class="favorites__shop-link" href=""
-                            >Встраиваемые вытяжки</a
-                          >
-                        </li>
-                        <li class="favorites__shop--item">
-                          <a class="favorites__shop-link" href=""
-                            >Встраиваемые вытяжки</a
-                          >
-                        </li>
-                        <li class="favorites__shop--item">
-                          <a class="favorites__shop-link" href=""
-                            >Встраиваемые вытяжки</a
-                          >
-                        </li>
-                        <li class="favorites__shop--item">
-                          <a class="favorites__shop-link" href=""
-                            >Встраиваемые вытяжки</a
-                          >
-                        </li>
-                        <li class="favorites__shop--item">
-                          <a class="favorites__shop-link" href=""
-                            >Встраиваемые вытяжки</a
-                          >
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="favorites__shop-item">
-                      <label class="favorites__shop_item-header">
-                        <span class="favorites__shop-title">Акция</span>
-                        <span class="swicher">
-                          <input
-                            type="checkbox"
-                            class="bonus__toggle"
-                            checked=""
-                            name="action"
-                         >
-                          <span class="bonus__slider"></span>
-                        </span>
-                      </label>
-                    </div>
-                    <div class="favorites__shop-item">
-                      <div class="favorites__shop_item-header">
-                        <h3 class="favorites__shop-title">Бренд</h3>
-                        <img
-                          src="assets/images/open_arrow.svg"
-                          alt="arrow-down"
-                       >
+                  <div  id="filter" class="filter">
+                    <form class="favorites__shop_filterlists">
+                      <div class="filter_mobile_top ">
+                        <h3 class="favorites__shop-title">Фильтры</h3>
+                        <div class="filter_mobile_close" id="filter_mobile_close">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
+                            <path d="M1 13L13 1" stroke="#001B2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M1 1L13 13" stroke="#001B2B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                          </svg>
+                        </div>
                       </div>
-                      <div class="favorites__shop_content">
-                          <div class="favorites__shop-list">
-                            <label class="favorites__checkbox--item">
-                              <span class="checkbox">
-                                <input
-                                  type="checkbox"
-                                  class="checkbox__input"
-                                  checked
-                                  required=""
-                                  name="brand"
-                               >
-                                <span class="checkbox__box"></span>
-                              </span>
-                              <span class="favorites__shop"> Smeg </span>
-                            </label>
-                            <label class="favorites__checkbox--item">
-                              <span class="checkbox">
-                                <input
-                                  type="checkbox"
-                                  class="checkbox__input"
-                                  required=""
-                                  name="brand2"
-                               >
-                                <span class="checkbox__box"></span>
-                              </span>
-                              <span class="favorites__shop"> Smeg </span>
-                            </label>
-                            <label class="favorites__checkbox--item">
-                              <span class="checkbox">
-                                <input
-                                  type="checkbox"
-                                  class="checkbox__input"
-                                  required=""
-                                  name="brand3"
-                               >
-                                <span class="checkbox__box"></span>
-                              </span>
-                              <span class="favorites__shop"> Smeg </span>
-                            </label>
-                            <label class="favorites__checkbox--item">
-                              <span class="checkbox">
-                                <input
-                                  type="checkbox"
-                                  class="checkbox__input"
-                                  required=""
-                                  name="brand4"
-                               >
-                                <span class="checkbox__box"></span>
-                              </span>
-                              <span class="favorites__shop"> Smeg </span>
-                            </label>
-                            <label class="favorites__checkbox--item">
-                              <span class="checkbox">
-                                <input
-                                  type="checkbox"
-                                  class="checkbox__input"
-                                  required=""
-                                  name="brand5"
-                               >
-                                <span class="checkbox__box"></span>
-                              </span>
-                              <span class="favorites__shop"> Smeg </span>
-                            </label>
-                          </div>
+                      <div class="favorites__shop-item">
+                        <h3 class="favorites__shop-title">Категории</h3>
+                        <ul class="favorites__shop-list">
+                          <li class="favorites__shop--item">
+                            <a class="favorites__shop-link" href=""
+                              >Встраиваемые вытяжки</a
+                            >
+                          </li>
+                          <li class="favorites__shop--item">
+                            <a class="favorites__shop-link" href=""
+                              >Встраиваемые вытяжки</a
+                            >
+                          </li>
+                          <li class="favorites__shop--item">
+                            <a class="favorites__shop-link" href=""
+                              >Встраиваемые вытяжки</a
+                            >
+                          </li>
+                          <li class="favorites__shop--item">
+                            <a class="favorites__shop-link" href=""
+                              >Встраиваемые вытяжки</a
+                            >
+                          </li>
+                          <li class="favorites__shop--item">
+                            <a class="favorites__shop-link" href=""
+                              >Встраиваемые вытяжки</a
+                            >
+                          </li>
+                          <li class="favorites__shop--item">
+                            <a class="favorites__shop-link" href=""
+                              >Встраиваемые вытяжки</a
+                            >
+                          </li>
+                          <li class="favorites__shop--item">
+                            <a class="favorites__shop-link" href=""
+                              >Встраиваемые вытяжки</a
+                            >
+                          </li>
+                          <li class="favorites__shop--item">
+                            <a class="favorites__shop-link" href=""
+                              >Встраиваемые вытяжки</a
+                            >
+                          </li>
+                        </ul>
                       </div>
-                    </div>
-                    <div class="favorites__shop-item">
-                      <div class="favorites__shop_item-header">
-                        <h3 class="favorites__shop-title">Бренд</h3>
-                        <img
-                          src="assets/images/open_arrow.svg"
-                          alt="arrow-down"
-                       >
+                      <div class="favorites__shop-item">
+                        <label class="favorites__shop_item-header">
+                          <span class="favorites__shop-title">Акция</span>
+                          <span class="swicher">
+                            <input
+                              type="checkbox"
+                              class="bonus__toggle"
+                              checked=""
+                              name="action"
+                           >
+                            <span class="bonus__slider"></span>
+                          </span>
+                        </label>
                       </div>
-                      <div class="favorites__shop_content">
-                          <div class="favorites__shop-list">
-                            <div class="range">
-                                <div class="range__inputs">
-                                  <input type="number" name="count_from" class="range__input range__input--min" id="input-min">
-                                  <input type="number" name="count_to" class="range__input range__input--max" id="input-max">
-                                </div>
-                                <div class="range__slider" id="slider"></div>
-                              </div>
-    
-                          </div>
-                      </div>
-                    </div>
-                    <div class="favorites__shop-item">
+                      <div class="favorites__shop-item">
                         <div class="favorites__shop_item-header">
-                          <h3 class="favorites__shop-title">Фильтр</h3>
+                          <h3 class="favorites__shop-title">Бренд</h3>
                           <img
                             src="assets/images/open_arrow.svg"
                             alt="arrow-down"
@@ -1547,11 +1462,11 @@
                                     class="checkbox__input"
                                     checked
                                     required=""
-                                    name="brand8"
+                                    name="brand"
                                  >
                                   <span class="checkbox__box"></span>
                                 </span>
-                                <span class="favorites__shop"> Чекбокс </span>
+                                <span class="favorites__shop"> Smeg </span>
                               </label>
                               <label class="favorites__checkbox--item">
                                 <span class="checkbox">
@@ -1559,11 +1474,11 @@
                                     type="checkbox"
                                     class="checkbox__input"
                                     required=""
-                                    name="brand9"
+                                    name="brand2"
                                  >
                                   <span class="checkbox__box"></span>
                                 </span>
-                                <span class="favorites__shop"> Чекбокс </span>
+                                <span class="favorites__shop"> Smeg </span>
                               </label>
                               <label class="favorites__checkbox--item">
                                 <span class="checkbox">
@@ -1571,11 +1486,11 @@
                                     type="checkbox"
                                     class="checkbox__input"
                                     required=""
-                                    name="brand9"
+                                    name="brand3"
                                  >
                                   <span class="checkbox__box"></span>
                                 </span>
-                                <span class="favorites__shop"> Чекбокс </span>
+                                <span class="favorites__shop"> Smeg </span>
                               </label>
                               <label class="favorites__checkbox--item">
                                 <span class="checkbox">
@@ -1583,11 +1498,11 @@
                                     type="checkbox"
                                     class="checkbox__input"
                                     required=""
-                                    name="brand11"
+                                    name="brand4"
                                  >
                                   <span class="checkbox__box"></span>
                                 </span>
-                                <span class="favorites__shop"> Чекбокс </span>
+                                <span class="favorites__shop"> Smeg </span>
                               </label>
                               <label class="favorites__checkbox--item">
                                 <span class="checkbox">
@@ -1595,18 +1510,18 @@
                                     type="checkbox"
                                     class="checkbox__input"
                                     required=""
-                                    name="brand12"
+                                    name="brand5"
                                  >
                                   <span class="checkbox__box"></span>
                                 </span>
-                                <span class="favorites__shop"> Чекбокс </span>
+                                <span class="favorites__shop"> Smeg </span>
                               </label>
                             </div>
                         </div>
-                    </div>
-                    <div class="favorites__shop-item">
-                        <div class="favorites__shop_item-header is-active">
-                          <h3 class="favorites__shop-title">Фильтр</h3>
+                      </div>
+                      <div class="favorites__shop-item">
+                        <div class="favorites__shop_item-header">
+                          <h3 class="favorites__shop-title">Бренд</h3>
                           <img
                             src="assets/images/open_arrow.svg"
                             alt="arrow-down"
@@ -1614,75 +1529,171 @@
                         </div>
                         <div class="favorites__shop_content">
                             <div class="favorites__shop-list">
-                              <label class="favorites__checkbox--item">
-                                <span class="checkbox">
-                                  <input
-                                    type="checkbox"
-                                    class="checkbox__input"
-                                    checked
-                                    required=""
-                                    name="brand13"
-                                 >
-                                  <span class="checkbox__box"></span>
-                                </span>
-                                <span class="favorites__shop"> Чекбокс </span>
-                              </label>
-                              <label class="favorites__checkbox--item">
-                                <span class="checkbox">
-                                  <input
-                                    type="checkbox"
-                                    class="checkbox__input"
-                                    required=""
-                                    name="brand14"
-                                 >
-                                  <span class="checkbox__box"></span>
-                                </span>
-                                <span class="favorites__shop"> Чекбокс </span>
-                              </label>
-                              <label class="favorites__checkbox--item">
-                                <span class="checkbox">
-                                  <input
-                                    type="checkbox"
-                                    class="checkbox__input"
-                                    required=""
-                                    name="checkbox"
-                                 >
-                                  <span class="checkbox__box"></span>
-                                </span>
-                                <span class="favorites__shop"> Чекбокс </span>
-                              </label>
-                              <label class="favorites__checkbox--item">
-                                <span class="checkbox">
-                                  <input
-                                    type="checkbox"
-                                    class="checkbox__input"
-                                    required=""
-                                    name="checkbox2"
-                                 >
-                                  <span class="checkbox__box"></span>
-                                </span>
-                                <span class="favorites__shop"> Чекбокс </span>
-                              </label>
-                              <label class="favorites__checkbox--item">
-                                <span class="checkbox">
-                                  <input
-                                    type="checkbox"
-                                    class="checkbox__input"
-                                    required=""
-                                    name="checkbox13"
-                                 >
-                                  <span class="checkbox__box"></span>
-                                </span>
-                                <span class="favorites__shop"> Чекбокс </span>
-                              </label>
+                              <div class="range">
+                                  <div class="range__inputs">
+                                    <input type="number" name="count_from" class="range__input range__input--min" id="input-min">
+                                    <input type="number" name="count_to" class="range__input range__input--max" id="input-max">
+                                  </div>
+                                  <div class="range__slider" id="slider"></div>
+                                </div>
+      
                             </div>
                         </div>
-                    </div>
-                    <div class="shop__btnlists">
-                      <button type="reset" class="button  btn--primary">Сбросить</button>
-                      <button type="submit" class="button btn--secondary">Применить</button>
-                    </div>
-                  </form>
+                      </div>
+                      <div class="favorites__shop-item">
+                          <div class="favorites__shop_item-header">
+                            <h3 class="favorites__shop-title">Фильтр</h3>
+                            <img
+                              src="assets/images/open_arrow.svg"
+                              alt="arrow-down"
+                           >
+                          </div>
+                          <div class="favorites__shop_content">
+                              <div class="favorites__shop-list">
+                                <label class="favorites__checkbox--item">
+                                  <span class="checkbox">
+                                    <input
+                                      type="checkbox"
+                                      class="checkbox__input"
+                                      checked
+                                      required=""
+                                      name="brand8"
+                                   >
+                                    <span class="checkbox__box"></span>
+                                  </span>
+                                  <span class="favorites__shop"> Чекбокс </span>
+                                </label>
+                                <label class="favorites__checkbox--item">
+                                  <span class="checkbox">
+                                    <input
+                                      type="checkbox"
+                                      class="checkbox__input"
+                                      required=""
+                                      name="brand9"
+                                   >
+                                    <span class="checkbox__box"></span>
+                                  </span>
+                                  <span class="favorites__shop"> Чекбокс </span>
+                                </label>
+                                <label class="favorites__checkbox--item">
+                                  <span class="checkbox">
+                                    <input
+                                      type="checkbox"
+                                      class="checkbox__input"
+                                      required=""
+                                      name="brand9"
+                                   >
+                                    <span class="checkbox__box"></span>
+                                  </span>
+                                  <span class="favorites__shop"> Чекбокс </span>
+                                </label>
+                                <label class="favorites__checkbox--item">
+                                  <span class="checkbox">
+                                    <input
+                                      type="checkbox"
+                                      class="checkbox__input"
+                                      required=""
+                                      name="brand11"
+                                   >
+                                    <span class="checkbox__box"></span>
+                                  </span>
+                                  <span class="favorites__shop"> Чекбокс </span>
+                                </label>
+                                <label class="favorites__checkbox--item">
+                                  <span class="checkbox">
+                                    <input
+                                      type="checkbox"
+                                      class="checkbox__input"
+                                      required=""
+                                      name="brand12"
+                                   >
+                                    <span class="checkbox__box"></span>
+                                  </span>
+                                  <span class="favorites__shop"> Чекбокс </span>
+                                </label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="favorites__shop-item">
+                          <div class="favorites__shop_item-header is-active">
+                            <h3 class="favorites__shop-title">Фильтр</h3>
+                            <img
+                              src="assets/images/open_arrow.svg"
+                              alt="arrow-down"
+                           >
+                          </div>
+                          <div class="favorites__shop_content">
+                              <div class="favorites__shop-list">
+                                <label class="favorites__checkbox--item">
+                                  <span class="checkbox">
+                                    <input
+                                      type="checkbox"
+                                      class="checkbox__input"
+                                      checked
+                                      required=""
+                                      name="brand13"
+                                   >
+                                    <span class="checkbox__box"></span>
+                                  </span>
+                                  <span class="favorites__shop"> Чекбокс </span>
+                                </label>
+                                <label class="favorites__checkbox--item">
+                                  <span class="checkbox">
+                                    <input
+                                      type="checkbox"
+                                      class="checkbox__input"
+                                      required=""
+                                      name="brand14"
+                                   >
+                                    <span class="checkbox__box"></span>
+                                  </span>
+                                  <span class="favorites__shop"> Чекбокс </span>
+                                </label>
+                                <label class="favorites__checkbox--item">
+                                  <span class="checkbox">
+                                    <input
+                                      type="checkbox"
+                                      class="checkbox__input"
+                                      required=""
+                                      name="checkbox"
+                                   >
+                                    <span class="checkbox__box"></span>
+                                  </span>
+                                  <span class="favorites__shop"> Чекбокс </span>
+                                </label>
+                                <label class="favorites__checkbox--item">
+                                  <span class="checkbox">
+                                    <input
+                                      type="checkbox"
+                                      class="checkbox__input"
+                                      required=""
+                                      name="checkbox2"
+                                   >
+                                    <span class="checkbox__box"></span>
+                                  </span>
+                                  <span class="favorites__shop"> Чекбокс </span>
+                                </label>
+                                <label class="favorites__checkbox--item">
+                                  <span class="checkbox">
+                                    <input
+                                      type="checkbox"
+                                      class="checkbox__input"
+                                      required=""
+                                      name="checkbox13"
+                                   >
+                                    <span class="checkbox__box"></span>
+                                  </span>
+                                  <span class="favorites__shop"> Чекбокс </span>
+                                </label>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="shop__btnlists">
+                        <button type="reset" class="button  btn--primary">Сбросить</button>
+                        <button type="submit" class="button btn--secondary">Применить</button>
+                      </div>
+                    </form>
+                  </div>
                   <div class="favorites__shop-right">
                      <div class="cards__top">
                       <div class="sort_dropdown">
@@ -1721,7 +1732,7 @@
                             <rect x="2" y="18" width="4" height="4" rx="0.25" stroke="#001B2B" stroke-width="2"/>
                           </svg>
                         </div>
-                        <a href="#filter" data-fancybox class="comparison-list__button  filter_open">
+                        <a href="#" class="comparison-list__button  filter_open">
                           <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                             <g clip-path="url(#clip0_195_16531)">
                             <path d="M9.333 16C9.18875 16 9.04839 15.9532 8.93299 15.8667L6.26633 13.8667C6.18353 13.8046 6.11633 13.724 6.07004 13.6315C6.02376 13.5389 5.99966 13.4368 5.99966 13.3333V9.58667L1.32233 4.32467C0.990142 3.94992 0.773248 3.48721 0.697715 2.99216C0.622182 2.4971 0.691224 1.99077 0.896544 1.53401C1.10186 1.07725 1.43472 0.689506 1.85512 0.417377C2.27551 0.145249 2.76555 0.000316279 3.26633 0L12.733 0C13.2337 0.000587367 13.7237 0.14576 14.1439 0.418071C14.5641 0.690383 14.8967 1.07825 15.1018 1.53506C15.3069 1.99187 15.3758 2.49818 15.3 2.99316C15.2243 3.48815 15.0073 3.95073 14.675 4.32533L9.99966 9.58667V15.3333C9.99966 15.5101 9.92942 15.6797 9.8044 15.8047C9.67938 15.9298 9.50981 16 9.333 16ZM7.333 13L8.66633 14V9.33333C8.66646 9.1701 8.72648 9.0126 8.835 8.89067L13.6803 3.43933C13.8419 3.25672 13.9473 3.03136 13.984 2.7903C14.0206 2.54924 13.9869 2.30274 13.8868 2.08037C13.7868 1.85801 13.6247 1.66924 13.4201 1.53673C13.2154 1.40421 12.9768 1.33359 12.733 1.33333H3.26633C3.02263 1.3337 2.78421 1.40436 2.57966 1.53684C2.37512 1.66932 2.21313 1.858 2.11313 2.08023C2.01313 2.30247 1.97937 2.54884 2.01588 2.78979C2.05239 3.03074 2.15764 3.25604 2.31899 3.43867L7.165 8.89067C7.27327 9.0127 7.33304 9.17019 7.333 9.33333V13Z" fill="#001B2B"/>
