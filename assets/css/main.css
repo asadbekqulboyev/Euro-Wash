@@ -5121,7 +5121,7 @@ h2 {
 .order_form .form_left .form_left_price_header, .order_form .form_left .form_left_price-item {
   display: flex;
   padding: 0 20px;
-  gap: 40px;
+  gap: 20px 40px;
 }
 @media (max-width: 768px) {
   .order_form .form_left .form_left_price_header {
@@ -5171,6 +5171,7 @@ h2 {
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
+  align-items: center;
 }
 .order_form .form_left .form_left_price-item .form_left_price-item-order {
   color: #3cb2f2;
