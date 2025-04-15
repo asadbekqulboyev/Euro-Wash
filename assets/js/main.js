@@ -666,5 +666,13 @@ $(document).ready(function () {
       $(".favorites__content").removeClass("is-active");
     }
   });
+  function PhoneMask (){
+    $('input[type="tel"]').inputmask({
+      mask: "+998 (99) 999-99-99",
+      placeholder: "_",
+      showMaskOnHover: false,
+      showMaskOnFocus: true
+    });
+  }
 });
-console.warn = function () {};
+// console.warn = function () {};
