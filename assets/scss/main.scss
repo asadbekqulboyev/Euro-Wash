@@ -16,6 +16,7 @@
 @import "variants";
 @import "filterbtn";
 @import "comparison";
+@import "history";
 body{
     &.is-active{
         overflow: hidden;

@@ -1,0 +1,29 @@
+.my_history_right {
+  .favorites__content {
+    display: flex;
+    gap: 10px 0;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .favorites__content--item {
+      width: calc(33.33% - 10px);
+      @media (max-width: 1260px) {
+        width: calc(50% - 10px);
+      }
+      @media (max-width: 980px) {
+        width: 100%;
+      }
+      .product-box__image {
+        max-width: 100%;
+        object-fit: contain;
+        text-align: center;
+      }
+    }
+
+  }
+  .content_btn{
+    margin-top: 24px !important;
+  }
+  .favorites__bottom{
+    margin-top: 30px !important ;
+  }
+}

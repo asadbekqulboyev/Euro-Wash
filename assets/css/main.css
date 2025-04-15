@@ -6342,6 +6342,37 @@ h2 {
   }
 }
 
+.my_history_right .favorites__content {
+  display: flex;
+  gap: 10px 0;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.my_history_right .favorites__content .favorites__content--item {
+  width: calc(33.33% - 10px);
+}
+@media (max-width: 1260px) {
+  .my_history_right .favorites__content .favorites__content--item {
+    width: calc(50% - 10px);
+  }
+}
+@media (max-width: 980px) {
+  .my_history_right .favorites__content .favorites__content--item {
+    width: 100%;
+  }
+}
+.my_history_right .favorites__content .favorites__content--item .product-box__image {
+  max-width: 100%;
+  object-fit: contain;
+  text-align: center;
+}
+.my_history_right .content_btn {
+  margin-top: 24px !important;
+}
+.my_history_right .favorites__bottom {
+  margin-top: 30px !important;
+}
+
 body.is-active {
   overflow: hidden;
 }
