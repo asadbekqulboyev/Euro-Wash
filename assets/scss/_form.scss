@@ -58,6 +58,7 @@
       width: 100%;
       gap: 10px;
     }
+
     .order_form--title {
       padding-bottom: 0;
     }
@@ -352,14 +353,13 @@
         }
       }
       &.mobile_component {
-        
-        .mobile_component-title{
+        .mobile_component-title {
           display: none;
           @media (max-width: 768px) {
             display: block;
           }
         }
-        .form__left_items{
+        .form__left_items {
           @media (max-width: 768px) {
             gap: 20px;
           }
@@ -408,6 +408,76 @@
         display: none;
       }
     }
+    .form_left_price {
+      @media (max-width:768px) {
+        margin-top: 20px;
+      }
+      .form_left_price_header-title {
+        flex: 1;
+        color: #78838a;
+        font-family: "PP Neue Montreal";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+      }
+      &_header,
+      &-item {
+        display: flex;
+        padding: 0 20px;
+        gap: 40px;
+        
+      }
+      &_header{
+        @media (max-width:768px) {
+          display: none;
+        }
+      }
+      &-item {
+        padding: 20px;
+        border-bottom: 1px solid #f6f6f6;
+        border-radius: 10px;
+        transition: all .2s linear;
+        cursor: pointer;
+        &:hover{
+          background: #F6F6F6;
+        }
+        @media (max-width:768px) {
+          flex-direction:column;
+          width: 100%;
+          gap: 10px;
+          &>span{
+            display: flex;
+          }
+        }
+        .form_left_price_header-title{
+          display: none;
+          @media (max-width:768px) {
+            display: block;
+          }
+        }
+        span {
+          flex: 1;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+        }
+        .form_left_price-item-order{
+          color: #3CB2F2;
+          font-family: "PP Neue Montreal";
+        }
+      }
+    }
+    &.products_tables{
+      gap: 24px;
+      .content_btn{
+        margin-top: 0;
+      }
+      .favorites__bottom{
+        margin-top: 0;
+        margin-top: 5px;
+        justify-content: center;
+      }
+    }
   }
 
   .form_right {
@@ -427,8 +497,9 @@
           border-radius: 10px;
           background: #fff;
           flex: 0 0 auto;
-          transition: all .2s linear;
+          transition: all 0.2s linear;
           border: 1px solid transparent;
+          padding: 10px 20px;
           cursor: pointer;
           &.active {
             border: 1px solid #3cb2f2;
@@ -479,14 +550,18 @@
         gap: 10px;
         text-decoration: none;
         color: #78838a;
-        transition: all 0.2s line-height;
+        transition: all 0.2s linear;
         &:hover {
+          color: var(--main-color);
+        }
+        &.active {
           color: var(--main-color);
         }
         @media (max-width: 768px) {
           font-size: 12px;
         }
       }
+     
     }
     .form_right_item.price ~ .form_right_item {
       margin-top: 0;
@@ -656,8 +731,8 @@
 .bonus__toggle:checked + .bonus__slider::before {
   left: 24px;
 }
-.mobile_none{
+.mobile_none {
   @media (max-width: 768px) {
-  display: none;
-}
+    display: none;
+  }
 }
