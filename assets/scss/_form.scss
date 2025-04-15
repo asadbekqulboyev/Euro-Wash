@@ -1,533 +1,663 @@
 .order_form {
-    padding-bottom: 80px;
-    @media (max-width:768px) {
-        padding-bottom: 40px;
+  padding-bottom: 80px;
+  .order_form__content_top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    .order_form--title {
+      padding-bottom: 0 !important;
     }
-    .order_form--title{
-        padding-bottom: 24px;
-        @media (max-width:768px) {
-            width: 100%;
-            font-size: 24px;
-            padding-bottom: 20px;
+  }
+  .order_form__content_exit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    flex: 0 0 auto;
+  }
+  @media (max-width: 768px) {
+    padding-bottom: 40px;
+  }
+  .order_form--title {
+    padding-bottom: 24px;
+    @media (max-width: 768px) {
+      width: 100%;
+      font-size: 24px;
+      padding-bottom: 20px;
+    }
+  }
+  .order_form__content--form {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    @media (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+
+  input:not([type="radio"]) {
+    border-radius: 10px;
+    background: #f6f6f6;
+    padding: 12px 24px;
+    width: 100%;
+    outline: 0;
+    border: 0;
+  }
+
+  .form_left {
+    width: calc(100% - 336px);
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    @media (max-width: 768px) {
+      width: 100%;
+      gap: 10px;
+    }
+    .order_form--title {
+      padding-bottom: 0;
+    }
+    .form__left-component {
+      border-radius: 20px;
+      background: #fff;
+      padding: 40px;
+      @media (max-width: 1300px) {
+        padding: 20px;
+      }
+      .form__left-component_title_title {
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        @media (max-width: 768px) {
+          font-size: 20px;
         }
-    }
-    .order_form__content--form {
-        display: flex;
+      }
+      .form__left_items--save {
+        margin: 20px auto 0;
+        display: block;
+        width: fit-content;
+      }
+      .cart__header {
         justify-content: space-between;
-        gap: 24px;
-        @media (max-width:768px) {
-            flex-direction: column;
-            gap: 20px;
+        padding-bottom: 13px;
+        @media (max-width: 1130px) {
+          display: none !important;
         }
-    }
+        .cart__column--quantity,
+        .cart__column--price,
+        .cart__column--total {
+          padding: 0;
+          background: transparent;
+          color: #78838a;
+          font-family: "PP Neue Montreal";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          text-align: left;
+        }
 
-    input:not([type="radio"]) {
-        border-radius: 10px;
-        background: #F6F6F6;
-        padding: 12px 24px;
-        width: 100%;
-        outline: 0;
-        border: 0;
-    }
+        .last {
+          flex: 0.1;
+        }
+      }
 
-    .form_left {
-        width: calc(100% - 336px);
+      .cart__header,
+      .cart__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 10px;
+        border-bottom: 1px solid #f6f6f6;
+        gap: 40px;
+        @media (max-width: 1300px) {
+          gap: 10px;
+        }
+        @media (max-width: 1130px) {
+          flex-wrap: wrap;
+          justify-content: flex-start;
+        }
+        @media (max-width: 768px) {
+          justify-content: space-between;
+          padding-bottom: 20px;
+        }
+
+        &:last-child {
+          border-bottom: 0;
+        }
+
+        .cart__name {
+          color: #001b2b;
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+          text-align: left;
+          @media (max-width: 768px) {
+            font-size: 12px;
+          }
+        }
+      }
+
+      .cart__column {
+        flex: 1;
+        text-align: center;
+        display: flex;
+        @media (max-width: 1130px) {
+          width: fit-content;
+          flex: 0 0 auto;
+        }
+      }
+
+      .cart__column--product {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: #78838a;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        flex: 2;
+        @media (max-width: 1130px) {
+          width: 60%;
+        }
+      }
+
+      .card_price {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+      }
+
+      .cart__column--price {
+        flex-direction: column;
+      }
+
+      .cart__image {
+        width: 80px;
+        height: auto;
+        @media (max-width: 768px) {
+          width: 40%;
+        }
+      }
+
+      .cart__price {
         display: flex;
         flex-direction: column;
-        gap: 24px;
-        @media (max-width:768px) {
-            width: 100%;
-            gap: 10px;
+        align-items: center;
+        color: #78838a;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .cart__old-price {
+        text-decoration: line-through;
+        color: #f26c6c;
+        text-align: center;
+        font-family: "PP Neue Montreal";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @media (max-width: 768px) {
+          font-size: 12px;
         }
-        .form__left-component {
-            border-radius: 20px;
-            background: #FFF;
-            padding: 40px;
-            @media (max-width:1300px) {
-               padding: 20px;
-            }
-            .form__left-component_title_title {
-                font-size: 24px;
-                font-style: normal;
-                font-weight: 700;
-                @media (max-width:768px) {
-                    font-size: 20px;
-                }
-            }
+      }
 
-
-
-            .cart__header {
-                justify-content: space-between;
-                padding-bottom: 13px;
-                @media (max-width:1130px) {
-                    display: none !important;
-                 }
-                .cart__column--quantity,
-                .cart__column--price,
-                .cart__column--total {
-                    padding: 0;
-                    background: transparent;
-                    color: #78838A;
-                    font-family: "PP Neue Montreal";
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 500;
-                    text-align: left;
-                   
-                }
-
-                .last {
-                    flex: .1;
-                }
-            }
-
-            .cart__header,
-            .cart__item {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                padding: 10px;
-                border-bottom: 1px solid #F6F6F6;
-                gap: 40px;
-                @media (max-width:1300px) {
-                    gap: 10px;
-                }
-                @media (max-width:1130px) {
-                   flex-wrap: wrap;
-                   justify-content: flex-start;
-                 }
-                 @media (max-width:768px) {
-                    justify-content: space-between;
-                    padding-bottom: 20px;
-                 }
-                 
-                &:last-child {
-                    border-bottom: 0;
-                }
-
-                .cart__name {
-                    color: #001B2B;
-                    font-family: Inter;
-                    font-size: 14px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                    text-align: left;
-                    @media (max-width:768px) {
-                        font-size: 12px;
-                    }
-                }
-
-            }
-
-            .cart__column {
-                flex: 1;
-                text-align: center;
-                display: flex;
-                @media (max-width:1130px) {
-                    width: fit-content;
-                    flex:0 0 auto;
-                }
-            }
-
-            .cart__column--product {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                color: #78838A;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-                flex: 2;
-                @media (max-width:1130px) {
-                    width: 60%;
-                }
-            }
-
-            .card_price {
-                display: flex;
-                gap: 10px;
-                align-items: center;
-            }
-
-            .cart__column--price {
-                flex-direction: column;
-            }
-
-            .cart__image {
-                width: 80px;
-                height: auto;
-                @media (max-width:768px) {
-                    width: 40%;
-                }
-            }
-
-            .cart__price {
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-                color: #78838A;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-            }
-
-            .cart__old-price {
-                text-decoration: line-through;
-                color: #F26C6C;
-                text-align: center;
-                font-family: "PP Neue Montreal";
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-                @media (max-width:768px) {
-                    font-size: 12px;
-                }
-            }
-
-            .cart__discount {
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 600;
-                color: #FFF;
-                text-align: center;
-                border-radius: 100px;
-                background: #F26C6C;
-                padding: 3px 5px;
-                @media (max-width:768px) {
-                    font-weight: 400;
-                    font-size: 10px;
-                }
-            }
-
-            .cart__new-price {
-                color: #000;
-                text-align: left;
-                font-family: "PP Neue Montreal";
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-                @media (max-width:768px) {
-                    font-size: 16px;
-                }
-            }
-
-            .cart__quantity {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .cart__column--quantity {
-                background: #F6F6F6;
-                border-radius: 10px;
-                align-items: center;
-                padding: 12px 24px;
-                justify-content: space-between;
-            }
-
-            .cart__btn {
-                outline: 0;
-                border: 0;
-                background: transparent;
-                cursor: pointer;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            input.cart__input {
-                width: 40px;
-                display: block;
-                text-align: center;
-                margin: 0 5px;
-                padding: 0;
-                color: var(--001-b-2-b, #001B2B);
-                font-family: "PP Neue Montreal";
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 700;
-
-            }
-
-
-            .cart__total {
-                font-weight: bold;
-            }
-
-            .cart__remove {
-                background: none;
-                border: none;
-                font-size: 18px;
-                color: red;
-                cursor: pointer;
-                width: fit-content;
-            }
-
-            .cart__column--total {
-                color: #000;
-                text-align: center;
-                font-family: "PP Neue Montreal";
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: normal;
-                display: flex;
-                flex-direction: column;
-                p{
-                    display: none;
-                    @media (max-width:768px) {
-                        display: block;
-                        color: #78838A;
-                        text-align: left;
-                        font-weight: 400;
-                        font-size: 12px;
-                    }
-                }
-                @media (max-width:768px) {
-                    font-size: 16px;
-                }
-            }
-
-            .radio {
-                width: 100%;
-                color: var(--main-color);
-                font-family: "PP Neue Montreal";
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 700;
-                margin-top: 20px;
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                @media (max-width:768px) {
-                    font-size: 14px;
-                }
-                &.start {
-                    align-items: flex-start;
-
-                    .radio__description {
-                        color: #78838A;
-                        font-family: "PP Neue Montreal";
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 500;
-                        display: block;
-                        @media (max-width:768px) {
-                            font-size: 14px;
-                        }
-                    }
-                }
-
-                .radio__title {
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 700;
-                    @media (max-width:768px) {
-                        font-size: 14px;
-                    }
-                }
-            }
-
+      .cart__discount {
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 600;
+        color: #fff;
+        text-align: center;
+        border-radius: 100px;
+        background: #f26c6c;
+        padding: 3px 5px;
+        @media (max-width: 768px) {
+          font-weight: 400;
+          font-size: 10px;
         }
+      }
 
-        .form__left_items {
-            display: flex;
-            justify-content: space-between;
-            margin-top: 20px;
-            @media (max-width:768px) {
-                flex-wrap: wrap;
-                gap: 10px;
-                flex-direction: column;
-            }
+      .cart__new-price {
+        color: #000;
+        text-align: left;
+        font-family: "PP Neue Montreal";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        @media (max-width: 768px) {
+          font-size: 16px;
         }
+      }
 
-        .form__left_item {
-            width: calc(33.33% - 10px);
-            @media (max-width:768px) {
-                width: 100%;
-            }
-            &.input_50 {
-                width: calc(50% - 10px);
-                @media (max-width:768px) {
-                    width: 100%;
-                }
-            }
+      .cart__quantity {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      .cart__column--quantity {
+        background: #f6f6f6;
+        border-radius: 10px;
+        align-items: center;
+        padding: 12px 24px;
+        justify-content: space-between;
+      }
+
+      .cart__btn {
+        outline: 0;
+        border: 0;
+        background: transparent;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      input.cart__input {
+        width: 40px;
+        display: block;
+        text-align: center;
+        margin: 0 5px;
+        padding: 0;
+        color: var(--001-b-2-b, #001b2b);
+        font-family: "PP Neue Montreal";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+      }
+
+      .cart__total {
+        font-weight: bold;
+      }
+
+      .cart__remove {
+        background: none;
+        border: none;
+        font-size: 18px;
+        color: red;
+        cursor: pointer;
+        width: fit-content;
+      }
+
+      .cart__column--total {
+        color: #000;
+        text-align: center;
+        font-family: "PP Neue Montreal";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        display: flex;
+        flex-direction: column;
+        p {
+          display: none;
+          @media (max-width: 768px) {
+            display: block;
+            color: #78838a;
+            text-align: left;
+            font-weight: 400;
+            font-size: 12px;
+          }
         }
-    }
+        @media (max-width: 768px) {
+          font-size: 16px;
+        }
+      }
 
-    .form_right {
-        position: sticky;
-        top: 140px;
-        height: fit-content;
-        border-radius: 20px;
-        background: #FFF;
-        flex: 1;
+      .radio {
+        width: 100%;
+        color: var(--main-color);
+        font-family: "PP Neue Montreal";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        @media (max-width: 768px) {
+          font-size: 14px;
+        }
+        &.start {
+          align-items: flex-start;
 
-        .form_right-title {
-            color: var(--main-color);
-            font-size: 20px;
+          .radio__description {
+            color: #78838a;
+            font-family: "PP Neue Montreal";
+            font-size: 14px;
             font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            padding: 20px 20px 0;
+            font-weight: 500;
+            display: block;
+            @media (max-width: 768px) {
+              font-size: 14px;
+            }
+          }
         }
 
-        .form_right_item {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            margin-top: 10px;
-            padding: 20px;
-            padding-bottom: 20px;
-            border-bottom: 1px solid #F6F6F6;
+        .radio__title {
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          @media (max-width: 768px) {
+            font-size: 14px;
+          }
         }
-
-        .product__right_price {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px 20px;
-            border-bottom: 1px solid #F6F6F6;
-
-            .product__right_price-text {
-                color: #78838A;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 500;
-            }
-
-            .product__right_price-sum {
-                color: #000;
-                text-align: center;
-                font-family: "PP Neue Montreal";
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 700;
-            }
+      }
+      &.mobile_component {
+        
+        .mobile_component-title{
+          display: none;
+          @media (max-width: 768px) {
+            display: block;
+          }
         }
-
-        .bonus {
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            font-size: 18px;
-            font-weight: bold;
-            color: var(--main-color);
-            padding: 20px;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 700;
-            justify-content: space-between;
-            border-bottom: 1px solid #F6F6F6;
-
-            .banus_left {
-                display: flex;
-                align-items: center;
-                gap: 5px;
-            }
-
-            .bonus__amount {
-                display: flex;
-                align-items: center;
-                border-radius: 100px;
-                background: #F6F6F6;
-                padding: 3px 5px;
-                gap: 2px;
-            }
-
-            .bonus__toggle {
-                display: none;
-            }
-
-            .bonus__slider {
-                width: 48px;
-                height: 28px;
-                background: #ddd;
-                border-radius: 12px;
-                position: relative;
-                cursor: pointer;
-                border-radius: 100px;
-            }
-
-            .bonus__slider::before {
-                content: "";
-                position: absolute;
-                width: 20px;
-                height: 20px;
-                background: white;
-                border-radius: 50%;
-                top: 50%;
-                left: 4px;
-                transform: translateY(-50%);
-                transition: 0.3s;
-            }
-
-            .bonus__toggle:checked+.bonus__slider {
-                background: #3CB2F2;
-
-            }
-
-            .bonus__toggle:checked+.bonus__slider::before {
-                left: 24px;
-            }
-        }
-
-        .form_right_bottom {
-            display: flex;
-            flex-direction: column;
-            padding: 20px;
+        .form__left_items{
+          @media (max-width: 768px) {
             gap: 20px;
-
-            .form_description {
-                color: #78838A;
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: normal;
-                a{
-                    color: inherit;
-                }
-            }
+          }
         }
-
+      }
     }
+
+    .form__left_items {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+      @media (max-width: 768px) {
+        flex-wrap: wrap;
+        gap: 10px;
+        flex-direction: column;
+      }
+    }
+
+    .form__left_item {
+      width: calc(33.33% - 10px);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      span {
+        color: #78838a;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+      }
+      @media (max-width: 768px) {
+        width: 100%;
+      }
+      &.input_50 {
+        width: calc(50% - 10px);
+        @media (max-width: 768px) {
+          width: 100%;
+        }
+      }
+      input {
+        font-family: "PP Neue Montreal";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+      }
+      input[type="date"]::-webkit-calendar-picker-indicator {
+        display: none;
+      }
+    }
+  }
+
+  .form_right {
+    position: sticky;
+    top: 140px;
+    height: fit-content;
+    border-radius: 20px;
+    background: #fff;
+    flex: 1;
+    &.mobile_component {
+      @media (max-width: 768px) {
+        background: transparent;
+        position: static;
+      }
+      .form_right_item {
+        @media (max-width: 768px) {
+          border-radius: 10px;
+          background: #fff;
+          flex: 0 0 auto;
+          transition: all .2s linear;
+          border: 1px solid transparent;
+          cursor: pointer;
+          &.active {
+            border: 1px solid #3cb2f2;
+          }
+          &:hover {
+            border: 1px solid #3cb2f2;
+          }
+        }
+      }
+    }
+    .form_right-title {
+      color: var(--main-color);
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      padding: 20px 20px 0;
+    }
+
+    .form_right_item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-top: 10px;
+      padding: 20px;
+      padding-bottom: 20px;
+      border-bottom: 1px solid #f6f6f6;
+      &.price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: row;
+        padding-top: 0;
+        .new_price {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 100%;
+          letter-spacing: 0%;
+          text-align: center;
+        }
+      }
+      .form_right_item-link {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        text-decoration: none;
+        color: #78838a;
+        transition: all 0.2s line-height;
+        &:hover {
+          color: var(--main-color);
+        }
+        @media (max-width: 768px) {
+          font-size: 12px;
+        }
+      }
+    }
+    .form_right_item.price ~ .form_right_item {
+      margin-top: 0;
+    }
+
+    .product__right_price {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px 20px 20px;
+      border-bottom: 1px solid #f6f6f6;
+
+      .product__right_price-text {
+        color: #78838a;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+      }
+
+      .product__right_price-sum {
+        color: #000;
+        text-align: center;
+        font-family: "PP Neue Montreal";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+      }
+    }
+    .form_right_price_title {
+      color: #78838a;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 100%;
+      letter-spacing: 0%;
+    }
+    .bonus {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 18px;
+      font-weight: bold;
+      color: var(--main-color);
+      padding: 20px;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      justify-content: space-between;
+      border-bottom: 1px solid #f6f6f6;
+
+      .banus_left {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+      }
+
+      .bonus__amount {
+        display: flex;
+        align-items: center;
+        border-radius: 100px;
+        background: #f6f6f6;
+        padding: 3px 5px;
+        gap: 2px;
+      }
+
+      .bonus__toggle {
+        display: none;
+      }
+
+      .bonus__slider {
+        width: 48px;
+        height: 28px;
+        background: #ddd;
+        border-radius: 12px;
+        position: relative;
+        cursor: pointer;
+        border-radius: 100px;
+      }
+
+      .bonus__slider::before {
+        content: "";
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        background: white;
+        border-radius: 50%;
+        top: 50%;
+        left: 4px;
+        transform: translateY(-50%);
+        transition: 0.3s;
+      }
+
+      .bonus__toggle:checked + .bonus__slider {
+        background: #3cb2f2;
+      }
+
+      .bonus__toggle:checked + .bonus__slider::before {
+        left: 24px;
+      }
+    }
+
+    .form_right_bottom {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+      gap: 20px;
+
+      .form_description {
+        color: #78838a;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        a {
+          color: inherit;
+        }
+      }
+    }
+    .mobile__btns {
+      @media (max-width: 768px) {
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        background: transparent;
+        width: calc(100% + 30px);
+        overflow-x: auto;
+        margin-left: -15px;
+        padding-left: 15px;
+        padding-right: 15px;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+  }
 }
 .bonus__toggle {
-    display: none;
+  display: none;
 }
 
 .bonus__slider {
-    width: 48px;
-    height: 28px;
-    background: #ddd;
-    border-radius: 12px;
-    position: relative;
-    cursor: pointer;
-    border-radius: 100px;
+  width: 48px;
+  height: 28px;
+  background: #ddd;
+  border-radius: 12px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 100px;
 }
 
 .bonus__slider::before {
-    content: "";
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: white;
-    border-radius: 50%;
-    top: 50%;
-    left: 4px;
-    transform: translateY(-50%);
-    transition: 0.3s;
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 4px;
+  transform: translateY(-50%);
+  transition: 0.3s;
 }
 
-.bonus__toggle:checked+.bonus__slider {
-    background: #3CB2F2;
-
+.bonus__toggle:checked + .bonus__slider {
+  background: #3cb2f2;
 }
 
-.bonus__toggle:checked+.bonus__slider::before {
-    left: 24px;
+.bonus__toggle:checked + .bonus__slider::before {
+  left: 24px;
+}
+.mobile_none{
+  @media (max-width: 768px) {
+  display: none;
+}
 }
