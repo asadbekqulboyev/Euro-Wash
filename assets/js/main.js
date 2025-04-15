@@ -667,12 +667,53 @@ $(document).ready(function () {
     }
   });
   function PhoneMask (){
-    $('input[type="tel"]').inputmask({
-      mask: "+998 (99) 999-99-99",
-      placeholder: "_",
-      showMaskOnHover: false,
-      showMaskOnFocus: true
+    if($('input[type="tel"]').length){
+      $('input[type="tel"]').inputmask({
+        mask: "+998 (99) 999-99-99",
+        placeholder: "_",
+        showMaskOnHover: false,
+        showMaskOnFocus: true
+      });
+    }
+  }
+  PhoneMask()
+  function Opens_lists() {
+    function bindDesktopClicks() {
+      $('.form_left_price-item').off('click').on('click', function () {
+        if ($(window).width() > 768) {
+          $(this).toggleClass('is-active');
+          $(this).children('.open__products_lists').slideToggle();
+        }
+      });
+    }
+  
+    function bindMobileClicks() {
+      $('.form_left_price-item .button.open_products').off('click').on('click', function (e) {
+        if ($(window).width() <= 768) {
+          e.preventDefault(); // <--- Shu yerga qo‘shildi
+          e.stopPropagation();
+  
+          const list = $(this).closest('.form_left_price-item').children('.open__products_lists');
+          $(this).closest('.form_left_price-item').toggleClass('is-active');
+          list.slideToggle();
+        }
+      });
+    }
+  
+    function bindEventsBasedOnScreen() {
+      bindDesktopClicks();
+      bindMobileClicks();
+    }
+  
+    bindEventsBasedOnScreen();
+  
+    $(window).resize(function () {
+      bindEventsBasedOnScreen();
     });
   }
+  
+  Opens_lists();
+  
+  
 });
-// console.warn = function () {};
+console.warn = function () {};

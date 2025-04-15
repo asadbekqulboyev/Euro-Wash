@@ -5099,6 +5099,12 @@ h2 {
 .order_form .form_left .form__left_item input[type=date]::-webkit-calendar-picker-indicator {
   display: none;
 }
+.order_form .form_left .form_left_price {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
 @media (max-width: 768px) {
   .order_form .form_left .form_left_price {
     margin-top: 20px;
@@ -5125,21 +5131,31 @@ h2 {
 .order_form .form_left .form_left_price-item {
   padding: 20px;
   border-bottom: 1px solid #f6f6f6;
-  border-radius: 10px;
   transition: all 0.2s linear;
   cursor: pointer;
+  flex-wrap: wrap;
 }
 .order_form .form_left .form_left_price-item:hover {
-  background: #F6F6F6;
+  border-radius: 10px;
+  background: #f6f6f6;
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form_left_price-item:hover {
+    border-radius: 0;
+  }
 }
 @media (max-width: 768px) {
   .order_form .form_left .form_left_price-item {
     flex-direction: column;
     width: 100%;
     gap: 10px;
+    cursor: auto;
   }
   .order_form .form_left .form_left_price-item > span {
     display: flex;
+  }
+  .order_form .form_left .form_left_price-item:hover {
+    background: transparent;
   }
 }
 .order_form .form_left .form_left_price-item .form_left_price_header-title {
@@ -5157,8 +5173,100 @@ h2 {
   font-weight: 700;
 }
 .order_form .form_left .form_left_price-item .form_left_price-item-order {
-  color: #3CB2F2;
+  color: #3cb2f2;
   font-family: "PP Neue Montreal";
+}
+.order_form .form_left .form_left_price-item .form_left_price-item-type {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.order_form .form_left .form_left_price-item .form_left_price-item-type img {
+  transform: rotate(-90deg);
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form_left_price-item .form_left_price-item-type img {
+    display: none;
+  }
+}
+.order_form .form_left .form_left_price-item .open_products {
+  padding: 13px 20px;
+  text-align: center;
+  color: var(--main-color);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  border-radius: 10px;
+  background: #f6f6f6;
+  width: 100%;
+  display: none;
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form_left_price-item .open_products {
+    display: block;
+  }
+}
+.order_form .form_left .form_left_price-item .open__products_lists {
+  width: 100%;
+  display: none;
+}
+.order_form .form_left .form_left_price-item .open__products_lists .open__products_item {
+  display: flex;
+  padding: 10px 20px;
+  align-items: center;
+  gap: 20px;
+  border-radius: 10px;
+  background: #fff;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 10px;
+  text-decoration: none;
+  color: var(--main-color);
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form_left_price-item .open__products_lists .open__products_item {
+    padding: 10px;
+    gap: 10px;
+  }
+}
+.order_form .form_left .form_left_price-item .open__products_lists .open__products_item:first-child {
+  margin-top: 0;
+}
+.order_form .form_left .form_left_price-item .open__products_lists .open__products_item .open__title, .order_form .form_left .form_left_price-item .open__products_lists .open__products_item .new__price {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form_left_price-item .open__products_lists .open__products_item .open__title, .order_form .form_left .form_left_price-item .open__products_lists .open__products_item .new__price {
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .order_form .form_left .form_left_price-item .open__products_lists .open__products_item .new__price {
+    flex: 0 0 auto;
+  }
+}
+.order_form .form_left .form_left_price-item .open__products_lists .open__products_item .open__products_item-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.order_form .form_left .form_left_price-item .open__products_lists .open__products_item .open__products_item-left .open__img {
+  width: 50px;
+}
+.order_form .form_left .form_left_price-item .open__products_lists .open__products_item span {
+  flex: 0 1 auto;
+}
+.order_form .form_left .form_left_price-item.is-active {
+  background: #f6f6f6;
+  border-radius: 10px;
+}
+.order_form .form_left .form_left_price-item.is-active .form_left_price-item-type img {
+  transform: rotate(90deg);
+}
+.order_form .form_left .form_left_price-item.is-active .open_products {
+  background: #fff;
 }
 .order_form .form_left.products_tables {
   gap: 24px;
