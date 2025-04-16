@@ -1111,7 +1111,7 @@ form {
   font-size: 14px;
   border: none;
   border-radius: 10px;
-  background-color: #F6F6F6;
+  background-color: #f6f6f6;
 }
 .search-box:focus {
   outline: none;
@@ -1289,12 +1289,12 @@ form {
   display: block;
   width: 100%;
   height: 1px;
-  background: #E0E0E0;
+  background: #e0e0e0;
   position: absolute;
   top: 50%;
   left: 0;
   opacity: 0.05;
-  background: #2B2A29;
+  background: #2b2a29;
 }
 .modal__form .social-login {
   display: flex;
@@ -1390,6 +1390,280 @@ form {
   .modal__description {
     font-size: var(--small-text);
   }
+}
+.modal#korzina {
+  padding: 0 15px;
+}
+.modal#korzina .modal__form {
+  max-width: 620px;
+}
+@media (max-width: 768px) {
+  .modal#korzina .modal__form {
+    width: calc(100% - 30px);
+  }
+}
+.modal#korzina .modal__form .product-box__type {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 20px 0;
+}
+.modal#korzina .modal__form .product-box__type--text {
+  color: #78838a;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0%;
+}
+.modal#korzina .modal__form .product-box__type--title {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  text-align: center;
+}
+.modal#korzina .modal__form .product-box__type--title a {
+  color: var(--main-color);
+  text-decoration: none;
+}
+.modal#korzina .modal__form .cart__item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f6f6f6;
+  gap: 20px;
+}
+@media (max-width: 1300px) {
+  .modal#korzina .modal__form .cart__item {
+    gap: 10px;
+  }
+}
+@media (max-width: 1130px) {
+  .modal#korzina .modal__form .cart__item {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 768px) {
+  .modal#korzina .modal__form .cart__item {
+    justify-content: space-between;
+    padding-bottom: 20px;
+  }
+}
+.modal#korzina .modal__form .cart__item .cart__name {
+  color: #001b2b;
+  font-family: Inter;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-align: left;
+}
+@media (max-width: 768px) {
+  .modal#korzina .modal__form .cart__item .cart__name {
+    font-size: 12px;
+  }
+}
+.modal#korzina .modal__form .cart__column {
+  flex: 0 1 auto;
+  text-align: center;
+  display: flex;
+}
+@media (max-width: 1130px) {
+  .modal#korzina .modal__form .cart__column {
+    width: fit-content;
+    flex: 0 0 auto;
+  }
+}
+.modal#korzina .modal__form .cart__column--product {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #78838a;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  flex: 2;
+}
+@media (max-width: 1130px) {
+  .modal#korzina .modal__form .cart__column--product {
+    width: 60%;
+  }
+}
+.modal#korzina .modal__form .card_price {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+.modal#korzina .modal__form .cart__column--price {
+  flex-direction: column;
+}
+.modal#korzina .modal__form .cart__image {
+  width: 72px;
+  height: auto;
+}
+@media (max-width: 768px) {
+  .modal#korzina .modal__form .cart__image {
+    width: 40%;
+  }
+}
+.modal#korzina .modal__form .cart__price {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #78838a;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+}
+.modal#korzina .modal__form .cart__old-price {
+  text-decoration: line-through;
+  color: #f26c6c;
+  text-align: center;
+  font-family: "PP Neue Montreal";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 768px) {
+  .modal#korzina .modal__form .cart__old-price {
+    font-size: 12px;
+  }
+}
+.modal#korzina .modal__form .cart__discount {
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 300;
+  color: #fff;
+  text-align: center;
+  border-radius: 100px;
+  background: #f26c6c;
+  padding: 2px 5px;
+}
+@media (max-width: 768px) {
+  .modal#korzina .modal__form .cart__discount {
+    font-weight: 400;
+    font-size: 10px;
+  }
+}
+.modal#korzina .modal__form .cart__new-price {
+  color: #000;
+  text-align: left;
+  font-family: "PP Neue Montreal";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+@media (max-width: 768px) {
+  .modal#korzina .modal__form .cart__new-price {
+    font-size: 16px;
+  }
+}
+.modal#korzina .modal__form .cart__quantity {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal#korzina .modal__form .cart__column--quantity {
+  background: #f6f6f6;
+  border-radius: 10px;
+  align-items: center;
+  padding: 12px;
+  justify-content: space-between;
+}
+.modal#korzina .modal__form .cart__btn {
+  outline: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal#korzina .modal__form input.cart__input {
+  width: 20px;
+  display: block;
+  text-align: center;
+  margin: 0 5px;
+  padding: 0;
+  color: var(--001-b-2-b, #001b2b);
+  font-family: "PP Neue Montreal";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  background: transparent;
+  border: none;
+  outline: none;
+}
+.modal#korzina .modal__form .cart__total {
+  font-weight: bold;
+}
+.modal#korzina .modal__form .cart__remove {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: red;
+  cursor: pointer;
+  width: fit-content;
+}
+.modal#korzina .modal__form .cart__column--total {
+  color: #000;
+  text-align: center;
+  font-family: "PP Neue Montreal";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  display: flex;
+  flex-direction: column;
+}
+.modal#korzina .modal__form .cart__column--total p {
+  display: none;
+}
+@media (max-width: 768px) {
+  .modal#korzina .modal__form .cart__column--total p {
+    display: block;
+    color: #78838a;
+    text-align: left;
+    font-weight: 400;
+    font-size: 12px;
+  }
+}
+@media (max-width: 768px) {
+  .modal#korzina .modal__form .cart__column--total {
+    font-size: 16px;
+  }
+}
+.modal#korzina .modal__form .modal__form-items {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+}
+.modal#korzina .modal__form .modal__form-items .cart__item {
+  padding-bottom: 10px;
+}
+.modal#korzina .modal__form-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+@media (max-width: 556px) {
+  .modal#korzina .modal__form-buttons {
+    flex-direction: column;
+  }
+}
+.modal#korzina .modal__form-buttons .button {
+  width: 100%;
+}
+.modal#korzina .modal__form-buttons .button.black {
+  color: #fff;
+  background: #001B2B;
 }
 
 .hero__main {

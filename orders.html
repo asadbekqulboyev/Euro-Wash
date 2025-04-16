@@ -416,7 +416,7 @@
                   </svg>
                   <p>Войти</p>
                 </a>
-                <a class="header__bottom-actions_link" href="#">
+                <a class="header__bottom-actions_link" href="#"  data-fancybox data-src="#korzina" >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="21"
@@ -1924,7 +1924,7 @@
                       </a>
                     </li>
                     <li class="form_right_item">
-                      <a href="#" class="form_right_item-link">
+                      <a href="/my-history.html" class="form_right_item-link">
                         <img src="assets/images/profile_img4.svg" alt="" >
                         <span>История просмотров</span>
                       </a>
@@ -2756,6 +2756,102 @@
         </label>
       </form>
     </div>
+    <div class="modal" id="korzina">
+      <div class="modal__overlay"></div>
+      <form action="#" class="modal__form">
+          <div class="modal_close" data-fancybox-close>
+              <img src="assets/images/close.svg" alt="close">
+          </div>
+          <div class="modal__top">
+              <h4 class="modal__title">Козина товаров</h4>   
+             
+          </div>
+          <div class="modal__form-items">
+              <div class="cart__item">
+                  <div class="cart__column cart__column--product">
+                      <img src="assets/images/order_form.png" alt="Встраиваемая вытяжка Asko CC4527S" class="cart__image">
+                      <p class="cart__name">Встраиваемая вытяжка Asko CC4527S</p>
+                  </div>
+                  <div class="cart__column cart__column--price">
+                      <div class="card_price">
+                          <span class="cart__old-price">70 900 руб.</span>
+                          <span class="cart__discount">-25%</span>
+                      </div>
+                      <div class="card_price">
+                          
+                          <span class="cart__new-price">79 900 руб.</span>
+                      </div>
+                  </div>
+                  <div class="cart__column cart__column--quantity">
+                      <button type="button" class="cart__btn cart__btn--minus">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                              <path d="M2.5 10L17.5 10" stroke="#3CB2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                      </button>
+                      <input type="text" class="cart__input" value="1">
+                      <button type="button" class="cart__btn cart__btn--plus">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                              <path d="M10 2.5V17.5" stroke="#3CB2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M2.5 10L17.5 10" stroke="#3CB2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                      </button>
+                  </div>
+                  <div class=" cart__column--total">
+                      <p>Итого</p>
+                      <span>79 900 руб.</span>
+                  </div>
+                  <div class=" cart__column--remove">
+                      <button class="cart__remove">×</button>
+                  </div>
+              </div>
+              <div class="cart__item">
+                  <div class="cart__column cart__column--product">
+                      <img src="assets/images/order_form.png" alt="Встраиваемая вытяжка Asko CC4527S" class="cart__image">
+                      <p class="cart__name">Встраиваемая вытяжка Asko CC4527S</p>
+                  </div>
+                  <div class="cart__column cart__column--price">
+                      <div class="card_price">
+                          <span class="cart__old-price">70 900 руб.</span>
+                          <span class="cart__discount">-25%</span>
+                      </div>
+                      <div class="card_price">
+                          
+                          <span class="cart__new-price">79 900 руб.</span>
+                      </div>
+                  </div>
+                  <div class="cart__column cart__column--quantity">
+                      <button type="button" class="cart__btn cart__btn--minus">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                              <path d="M2.5 10L17.5 10" stroke="#3CB2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                      </button>
+                      <input type="text" class="cart__input" value="1">
+                      <button type="button" class="cart__btn cart__btn--plus">
+                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                              <path d="M10 2.5V17.5" stroke="#3CB2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                              <path d="M2.5 10L17.5 10" stroke="#3CB2F2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                          </svg>
+                      </button>
+                  </div>
+                  <div class=" cart__column--total">
+                      <p>Итого</p>
+                      <span>79 900 руб.</span>
+                  </div>
+                  <div class=" cart__column--remove">
+                      <button class="cart__remove">×</button>
+                  </div>
+              </div>
+          </div>
+          <div class="product-box__type">
+              <span class="product-box__type--text">2 товар(а) на сумму</span>
+              <span class="product-box__type--title "> <a href="">Asko CC4527S</a> </span>
+          </div>
+          <div class="modal__form-buttons">
+              <a href="#" class="button blue">Продолжить покупки</a>
+              <a href="#" class="button black">Оформить заказ</a>   
+          </div>
+      </form>
+  </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.js"></script>
